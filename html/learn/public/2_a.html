@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_a</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>a</h1>
+<pre>
+1)a : 하이퍼링크 태그
+한페이지에서 다른 페이지로 연결하는데 
+사용하는 하이퍼링크를 정의
+가장 중요한 속성은 => href
+링크대상을 나타내는 속성
+- 방문하지 않은 링크는 밑줄과 파란색으로 표시
+- 활성링크는 밑줄과 빨간색으로 표시.
+- target을 사용하여 새창에 띄울 수 있다.
+(_blank)
+- 전화번호를 연결할 수 있다.
+- 같은페이지에 다른 섹션을 링크에 연결할 수 있다.
+- 자바스크립트로 연결할 수 있다.
+- css 적용 내역
+a:link, a:visited, a:link:active, a:visited:active
+- a태그에서 url을 사용하면 코드가 지저분해진다.
+그래서 자바스크립트 함수로 onclick 이벤트를 사용한다.
+<a href="https://www.naver.com" target="_blank">Naver</a>
+이메일 주소를 연결하는 방법
+<a href="mailto:stophyun96@gmail.com">내 이메일로(outlook으로 연결)</a>
+전화번호로 연결
+<a href="tel:01080770464">myphone</a>
+같은 페이지의 섹션으로 연결하는 방법
+<a href="#s1">다른 섹션으로</a>
+자바스크립트로 연결
+<a href="javascript:alert('hello world!')">자바스크립트 헬로월드</a>
+
+2)abbr : 약어를 정의
+<p>
+the <abbr title="world health organization">world health organization</abbr>
+was founded in 1948.
+</p>
+3)address : 이탤릭체 입니다
+문서 또는 기사의 작성자 / 소유자에 대한 연락처 정보를 의미합니다
+-i : 기울임
+<address>
+written by <a href="mailto:web@web.com">jon doe</a>.<br>
+visit us at:<br>
+example.com<br>
+USA
+</address>
+
+4)area : 투명버튼 배너나 이미지의 그림에 한 요소를 클릭할 때 사용
+- 이미지 usemap을 설정해야 하고 coords로 좌표와 크기를 설정해야 합니다.
+<img src="images/com.png" usemap="#workmap">
+<map name="workmap">
+<area shape="rect" coords="34,44,270,350" href="https://www.daum.net"><!-- coords="x좌표,y좌표,x크기,y크기" -->
+<area shape="circle" coords="337,300,44" href="1_basic.html"><!-- coords="x좌표,y좌표,원 크기" -->
+</map>
+
+5)article : html5에서 웹에 관련되어있는 여러 태그가 생겼는데 그중 하나
+div라는 태그로 사용했는데 태그를 좀 더 구분하기 위해서 생김
+- header, nav, main, aside, article, section, 그림을 그리는 canvas
+- 전부 div로 사용했었음
+- 독립적인 컨텐츠를 지정하고 포럼 게시물, 블로그 포스트, 뉴스 스토리를 지정하고자 만들었다.
+- 특별하게 화면UI/UX에서 변하는 건 없다.
+<article>
+<h2>구글 크롬</h2>
+<p>2008년에 출시 된 웹 브라우저</p>
+</article>
+
+6)aside : 메인 컨텐츠 외 내용을 구성 => web 포지션은 side광고
+<aside>
+<h4>엡코트센터</h4>
+<p>엡코트센터는 월트디즈니 월드 리조트의 테마파크</p>
+</aside>
+
+7)audio : 음악이나 기타 오디오 스트림과 같은 사운드 컨텐츠를 문서에 삽입할 때 사용
+- 속성 -
+autoplay : 자동재생
+controls : 콘트롤 메뉴
+loop : 반복재생
+mute : 오디오 출력 음소거
+preload : 페이지가 로드될 때 작성자가 오디오 파일을 로드해야 하면 auto, 아니면 none
+src : 음악파일의 url
+
+반복재생
+<audio controls loop>
+<source src="music.ogg" type="audio.ogg">
+<source src="music.mp3" type="audio.mpeg">
+your browser does not support the audio element.
+</audio>
+
+8)권장하지 않는 삭제된 태그
+8-1)acronym : 약어를 정의하기 위해 html4에 사용 => abbr로 대체 됨
+8-2)applet : 포함 된 애플릿(플러그인)을 정의하기 위해 사용
+다양한 용도로 사용
+- AtiveX, flash, 디스플레이 지도, 바이러스 검사, 은행 id
+- 영상을 insert => video
+- 사운드는 insert => audio
+- 객체를 표현하려면 <embed></embed> => <object src="images/com.png"></object> 로 대체
+- 문서 표현은 <odject data="1_basic.html"></odject>
+
+
+
+</pre>
+<section id="s1">1</section>
+</body>
+</html>

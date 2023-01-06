@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dom</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>DOM : 도큐먼트 오브젝트 모델</h1>
+<pre>
+- html요소에서 수행할 수 있는 작업
+예시)컨텐츠를 추가하거나 바꿀 때 사용하는 것
+- html dom 문서 객체
+method
+1)document.getElementById("id")
+2)document.getElementByTagName("TagName")
+3)document.getElementByClassName("ClassName")
+
+<h1>요소변경</h1>
+.innerHTML : HTML을 넣어줌
+.attribute : html요소의 속성값 변경
+.style.property : 스타일 요소의 속성값 변경
+
+<h1>요소 추가 및 삭제</h1>
+.createElement : html요소 생성
+.removeChild : html요소 제거
+.appendChild : html요소 추가
+.replaceChild : html요소 변경
+.write(text) : html출력 스트림에 쓰기
+
+
+</pre>
+<h1>DOM 요소</h1>
+<pre>
+html요소 찾기
+- id로 html요소 찾기
+- 태그 이름으로 html요소 찾기
+- 클래스 이름으로 html요소 찾기
+- css선택자로 html요소 찾기
+- html객체 모음으로 html요소 찾기
+</pre>
+<h2>태그이름으로 html요소 찾기</h2>
+<p id="d1"></p>
+<script>
+const element = document.getElementsByTagName("p");
+document.getElementById("d1").innerHTML = "이 텍스트는 첫번째 파라그라프입니다." + element[0].innerHTML;
+</script>
+
+<h1>DOM 애니메이션</h1>
+<button onclick="myMove()">click me</button>
+
+<div id="container">
+<div id="animate"></div>
+</div>
+
+<script type="text/javascript">
+function myMove() {
+	let id = null;
+	const elem = document.getElementById("animate");
+	let pos = 0;
+	clearInterval(id);
+	id = setInterval(frame, 5);
+	function frame() {
+		if (pos == 350) {
+			clearInterval(id);
+		}else {//버튼을 클릭할 때 주기적으로 증가
+			pos++;
+			elem.style.top = pos + "px";
+			elem.style.left = pos + "px";
+		}
+	}
+}
+</script>
+
+<h1>DOM event</h1>
+<pre>
+이벤트의 예
+- 사용자가 마우스를 클릭할 때
+- 웹 페이지가 로드될 때
+- 이미지가 로드될 때
+- 마우스가 요소 위로 이동할 때
+- 입력필드가 변경된 경우
+- html양식을 제출할 때
+- 사용자가 키를 누를 때
+</pre>
+
+<h1 onclick="changeText(this)">click on this text!</h1>
+<script type="text/javascript">
+function changeText(id) {
+	id.innerHTML = "Ooops!";
+}
+</script>
+
+<div class="red" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+<script type="text/javascript">
+function mOver(obj) {
+	obj.innerHTML = "Thank you!"
+}
+function mOut(obj) {
+	obj.innerHTML = "Mouse Over Me!"
+}
+</script>
+
+<h1>addEventListener()</h1>
+<pre>
+- 이메서드는 지정된 요소에 이벤트 핸들러를 연결한다
+- 기존 이벤트 처리기를 덮어쓰지 않고 이벤트 처리기 요소에 연결한다
+- 하나의 요소에 여러 이벤트 핸들러를 추가할 수 없다
+- 동일한 유형의 많은 이벤트 핸들러 요소, 즉 두개의 클릭 이벤트를 추가할 수 있다.
+</pre>
+
+<button id="myBtn">Try it</button>
+<script type="text/javascript">
+document.getElementById("myBtn").addEventListener("click", function() {
+	alert("hello world");
+});
+</script>
+
+</body>
+</html>

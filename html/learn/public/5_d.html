@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_d</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>D</h1>
+<pre>
+1)data : 주어진 컨텐츠의 기계 판독을 가능한 번역을 추가하는데 사용 됨.
+이 요소는 데이터 프로세서에 대해 기계가 읽을 수 있는 값과 브라우저에서 랜더링할 때 사람이 읽을 수 있는 값 모두를
+제공합니다.
+아래 예시에 음식을 표시하지만 각 이름을 제품번호와 연결합니다.
+<ul>
+  <li><data value = "21053"> 방울토마도 </data></li>
+  <li><data value = "21054"> 소고기 </data></li>
+  <li><data value = "21055"> 스낵 </data></li>
+</ul>
+
+2)datalist : input요소에 대해 미리 정의된 옵션 목록을 지정합니다. 목적은 input요소에 자동완성 기능을 제공하는데 사용
+			 datalist id 속성은 input 요소의 목록 속성과 같아야 함
+<form action="/action_page.jsp" method="get">
+	<label for="browser">
+		브라우저를 리스트에서 선택하세요
+	</label>
+	<input list="browsers" name="browser" id="browser">
+	<datalist id="browsers">
+		<option value="Edge">
+		<option value="Chrome">
+		<option value="Opera">
+		<option value="Safari">
+	</datalist>
+	<input type="submit">
+</form>
+
+get과 post의 차이
+get : 서버의 리소스에서 데이터를 요청할 때
+post : 서버의 리소스를 새로 생성하거나 업데이트할 때
+
+개발의 기본 요소
+c(create) = 생성
+r(read) = 읽기
+u(update) = 수정
+d(delete) = 삭제
+
+3)dd : 정의 리스트 설명
+html 태그에는 세종류의 리스트 형태가 있다.
+숫자 => ol(오더리스트)
+숫자가 나오지 않음 => ul(언 오더리스트)
+정의 리스트 => dl
+<dl>
+<!-- dt밑에 dd가 들여쓰기 됨 -->
+  <dt>카누</dt> <dd>세상에서 가장 작은 카페</dd>
+  <dt>스타벅스</dt> <dd>별다방</dd>
+</dl>
+
+4)del : 삭제 된 부분을 표시할 때 반대 새로추가 된건 ins
+<p>my favorite color is <del>blue</del> <ins>red</ins></p>
+5)detail : 사용자가 요청 시 열고 닫는(토글 기능)을 제공한다.
+모든 종류의 콘텐츠를 detail 태그안에 넣을 수 있다.
+<details>
+<summary>
+토글 기능이란?
+</summary>
+	<p>작용과 반작용의 법칙으로 예전에는 jquery와 스크립트로 만들어야 했는데 
+	이를 사용하지 않고 태그로만 구현이 가능해졌다. => details태그</p>
+</details>
+6)dfn : 정의 요소를 나타내고 컨텐츠 내에서 정의될 용어를 지정한다.
+title을 표기하면 툴팁이 나옴.
+<p><dfn title="hypertext markup language">HTML</dfn></p>
+7)dialog : 개발에서 쓰는 팝업창을 대화상자 dialog 또는
+모달, 레이어라고 한다.
+- 대화상자 또는 하위창을 제거한다.
+<dialog open>this is an open dialog window</dialog>
+
+8)dir : dir은 디렉토리 태그입니다 html4에서 사용
+현재는 사용하지 않고 ul로 대체됨
+9)div : 화면을 나눠서 div라고 함
+분할은 좋으나 단점은 개별이 줄로 나와서 반드시 css와 함께 써야 된다.
+10)dl : 정의 리스트 wrap
+11)dt : 정의 리스트 title
+</pre>
+</body>
+</html>

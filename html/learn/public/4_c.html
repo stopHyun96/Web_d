@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_c</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/js.js"></script>
+<!-- 자바스크립트를 링킹 하는 방법 -->
+</head>
+<body>
+<h1>C</h1>
+<canvas id="myCanvas"></canvas>
+<script>
+let art = document.getElementById("myCanvas");
+//변수 art는 id "myCanvas"를 찾고
+let ctx = art.getContext("2d");
+//변수 ctx는 art를 2d그래픽으로 만든다.
+ctx.fillStyle = "#FF0000";	//레드
+ctx.fillRect(0, 0, 80, 100); // x, y, width, height
+</script>
+<pre>
+1)canvas => 벡터로 그림 그리기 => 추후 벡터애니메이션 구현
+2)caption : 테이블 태그에 캡션 => 프로젝트 완료 후 추후 find 목적으로 사용
+3)cite : 태창작물의 제목 정의 => (예: 책, 시, 노래) 기울임 꼴로 랜더링 됨.
+<p><cite>the scream</cite>
+by edward munch. painted in 1893.
+</p>
+
+4)code : 문서에서 컴퓨터 코그조각을 정의
+기본 모노스페이스 글꼴로 표시됨. 현재는 잘 사용하지 않고
+<samp></samp>
+<kbd></kbd>
+<var></var>
+<pre></pre>
+등으로 대체 됨.
+<p>the css <code>background-color</code>property</p>
+5)col : 
+6)colgroup : 
+5, 6번은 테이블에 칸이 많고 각각의 면적을 따로 정해야 할 때
+</pre>
+
+<h1>표</h1>
+<p>웹의 역사는 테이블코딩과 div코딩으로 나눠진다</p>
+<p>div코딩 이후로 표로만 활용</p>
+<table><!-- wrap -->
+<caption>생활복지 - 장애인</caption>
+<colgroup>
+	<col style="width: 300px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+</colgroup>
+	<thead>
+		<tr>
+		<th>one</th> <!-- th는 굵은 글씨로 나옴 -->
+		<th>two</th>
+		<th>three</th>
+		<th>one</th> <!-- th는 굵은 글씨로 나옴 -->
+		<th>two</th>
+		<th>three</th>
+		<th>one</th> <!-- th는 굵은 글씨로 나옴 -->
+		<th>two</th>
+		<th>three</th>
+		</tr><!-- 줄 -->
+	</thead><!-- 머리 -->
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</tbody><!-- 몸통 -->
+	<tfoot>
+		<tr>
+		<th>one</th>
+		<th>two</th>
+		<th>three</th>
+		<th>one</th>
+		<th>two</th>
+		<th>three</th>
+		<th>one</th>
+		<th>two</th>
+		<th>three</th>
+		</tr><!-- 줄 -->
+	</tfoot><!-- 발 -->
+</table>
+
+</body>
+</html>

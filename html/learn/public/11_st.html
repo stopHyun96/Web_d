@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="html튜토리얼">
+<meta name="keyword" content="html,css,java,spring">
+<meta name="author" content="jung">
+<!-- 반응형 웹을 만들기 위한 메타태그 뷰포트 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/js.js"></script>
+<title>html_s, t</title>
+</head>
+<body style="height: 3000px;">
+<h1>s</h1>
+<pre>
+1)s : 더 이상 올바르지 않거나 정확하지 않은 관련이 없는 텍스트를 지정 <!-- 작성한 구문에 중앙가로선이 그어진 채 출력 -->
+<p><s>only 50 ticket left!</s></p>
+<p>sold out!</p>
+2)samp : 컴퓨터 프로그램의 샘플출력을 정의하는데 사용
+<p><samp>file not found.</samp> press f1 to continue</p>
+
+3)script : script문을 포함하거나 script를 삽입하는데 사용
+4)section : 문서의 섹션을 정의한다.
+<section>
+<h2>WWF history</h2>
+<p>the world ~~~~~~</p>
+</section>
+
+5)select : 선택이 있는 드롭다운 메뉴를 만든다.
+<select>
+<option value="volvo">volvo</option>
+<option value="bmw">bmw</option>
+<option value="porche">porche</option>
+</select>
+
+6)small : 더 작은 텍스트를 의미
+웹사이트와 모바일에서 가장작은 클씨크기가 10px이다
+보다 더 작게 쓸때는 samll태그를 사용해야 한다.
+<p>난 보통크기</p>
+<small>난 좀더 작음</small>
+
+7)span : 일부 또는 문서의 일부를 표시하는 데에 사용되는 인라인 컨테이너
+<p>My mother has <span style="color: brown; font-size: 30px;">brown</span> eyes</p>
+8)strike : 취소선 텍스트를 만들기 위해 사용 더 이상 사용되지 않음
+<code><del>del과</del>		<ins>ins를 사용</ins></code>
+9)strong : 중요한 텍스트를 정의 그러나 굵을 뿐
+<strong>bold</strong>
+<b>bold</b>
+
+10)style : 스타일을 인서트할 때 선언하는 문
+11)sub : 아래첨자
+<p>this text contains <sub>subscript</sub> text.</p>
+12)summary : details요소에 대한 가시적 제목을 정의
+13)sup : 위첨자
+<p>this text contains <sup>superscript</sup> text.</p>
+14)svg : 벡터그래픽을 만들어 주는 태그
+<svg width="100" height="100">
+<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4px" fill="yellow">
+</svg>
+</pre>
+
+<h1>t</h1>
+<pre>
+1)table : html에 테이블을 정의
+2)tbody : 테이블에 본문 내용을 그룹화 하는데 사용
+3)td : 테이블에 표준 데이터 셀을 정의
+4)template : 페이지가 로드될 때 사용자에게 숨겨진 일부 html
+컨텐츠를 보관하는 컨테이너로 사용
+5)textarea : 입력 요소에서 다중에 줄을 쓸 때 사용
+<textarea rows="10" cols="100" placeholder="내용을 적어주세요..."></textarea>
+6)tfoot : 테이블의 바닥 글
+7)th : 헤더의 셀을 정의 좀더 볼드하게
+8)thead : 헤더 컨텐츠의 그룹화
+9)time : 특정시간 또는 날짜/시간을 정의한다.
+10)title : 문서의 제목을 정의
+11)tr : 테이블의 줄
+12)track : audio또는 video태그 요소에 track에 대한 텍스트 트랙을 지정
+13)tt : 사용하지 않음 kbd, var, code, samp로 대체
+</pre>
+
+<button onclick="show()">show hidden content</button>
+ 
+<template>
+<h2>flower</h2>
+<img alt="flowers" src="images/pink.png">
+</template>
+
+<script>
+function show() {
+	let temp = document.getElementsByTagName("template")[0];
+	let clone = temp.content.cloneNode(true);
+	document.body.appendChild(clone);	/* appendChild() => 밑으로 붙음 */
+}
+</script>
+
+<h1>u ~ w</h1>
+<pre>
+1)u : underline
+2)ul : unorderlist
+</pre>
+
+<h1>v</h1>
+<pre>
+1)var : 일부 텍스트를 변수로 지정
+<p>나는 상수 너는 <var>변수</var></p>
+2)video : 
+</pre>
+<video width="960" height="540" controls poster="images/pink.png">
+<source src="images/video.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>

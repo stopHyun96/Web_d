@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_b</title>
+<link rel="stylesheet" href="css/style.css">
+<base href="https://www.naver.com">
+<!-- 사이트의 모든 주소가 위에 주소가 base로 된다. -->
+</head>
+<body>
+<h1>b</h1>
+<pre>
+1)bdo (bi-directional override) : 현재 텍스트 방향을 재정의할 때 사용
+- ltr : 왼쪽에서 오른쪽
+- rtl : 오른쪽에서 왼쪽 => 가로반전
+<p>정상적인 표기법</p>
+<p><bdo dir="rtl">정상적인 표기법</bdo></p>
+
+2)blockquote : 큰 인용문(다른 소스에서 인용된 섹션을 지정합니다.)
+- blockquote 감싼 태그 하위 요소에 들여쓰기가 됨.
+- 긴 인용문을 쓸 때 사용하는 태그
+<blockquote cite="https://www.naver.com">
+lorem ipsum......
+</blockquote>
+- 짧은 인용은 q
+
+3)body : html에 하위요소 넘버 투 (하나만 사용가능함)
+html
+--head
+--body
+----h1, div ...
+
+4)br : 줄바꿈 태그 : 멀티라인을 표기할 때 사용 단점은 100줄이면 끝나는 곳에 br을 다 붙여야 함.. 권장하지 않는 방법
+짧은 줄 바꿈에 좋다.
+멀티라인은 css로 가로폭을 정하고 자동으로 내려가게 해주는게 좋다.
+<h1>첫번째 줄은 나<br>두번재 줄은 너</h1>
+
+5)button : 버튼을 만들 때 사용
+버튼의 종류 : 일반버튼태그, a, input 세가지
+<button class="btn">click</button>
+<br>
+<input type="button" value="click" class="btn">
+<br>
+<input type="submit" value="click" class="btn">
+<br>
+<a href="#" class="btn">click</a>
+
+6)사용하지 않는 태그
+6-1)big : 더 큰 텍스트를 표현할 때 사용
+css로 정하는게 권장사항 => font-size
+
+6-2)basefont : 텍스트의 색상/글꼴 크기를 지정
+css로 정하는게 권장사항 => color
+
+7)base : 모든 링크에 대한 기본 url 지정
+<a href="tag/tag_base.html">tag</a>
+<!-- https://www.naver.com/tag/tag_base.html -->
+
+8)b : 볼드태그
+<div>나는 기본 텍스트 난 굵은 <b>텍스트</b></div>
+css로 font-weight : bold, bolder, 100~800
+</pre>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="html튜토리얼">
+<meta name="keyword" content="html,css,java,spring">
+<meta name="author" content="jung">
+<!-- 반응형 웹을 만들기 위한 메타태그 뷰포트 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>html_m, n, o, p, q</title>
+</head>
+<body>
+<h1>m</h1>
+<pre>
+1)main : 문서의 주요 내용을 지정 아티클과 함께 사용하면 효과적이다.
+2)map : 클릭 가능한 영역이 있는 이미지 맵
+3)mark : css가 없는 상태에서 노란색 바탕이 들어가 있는 태그
+4)meta : 문서의 메타데이터 표현
+5)meter : 알려진 범위 또는 분수값 내에서 스칼라 측정
+- 이걸 게이지라고 한다
+- 권장사항 : 앞에 lavel로 시작
+<label for="disk_c">
+Disk usage C :
+</label>
+<meter id="disk_c" value="2" min="0" max="10"></meter>
+</pre>
+<nav>웹에서 내비게이션 바를 만들 때 사용하는 태그</nav>
+<nav>
+<a href="#">menu_1</a>
+<a href="#">menu_2</a>
+</nav>
+
+<h1>n</h1>
+<pre>
+noscript : 브라우저에서 스크립트를 비활성화 했거나 스크립트를 지원하지 않는 브라우저를 사용하는 사용자에게
+표시할 대체 컨텐츠를 정의
+<noscript>당신의 브라우저는 지원이 안됩니다.</noscript>
+</pre>
+
+<h1>o</h1>
+<pre>
+object : 객체태그 (데이터나 img)
+
+ol : 오더리스트 숫자가 나오는 리스트
+start값으로 숫자시작을 지정할 수 있음
+<ol start="50">
+  <li> Item one </li>
+  <li> Item two </li>
+</ol>
+
+output : 계산을 수행하고 결과를 output요소에 표시한다.
+</pre>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50"> +
+<input type="number" id="b" value="25"> =
+<output name="x" for="a b"></output>
+</form>
+<p>옵션태그 : 옵션을 선택하는 태그</p>
+<select>
+<option value="volvo">volvo</option>
+<option value="audi">audi</option>
+<option value="bmw ">bmw</option>
+</select>
+
+<h1>p</h1>
+<pre>
+1)p : 단락을 정의한다. 무조건 한줄로 작성됨
+2)param : object 요소에 대한 매개변수를 정의하는데 사용
+<object data="horse.wav">
+	<param name="autoplay" value="true">
+</object>
+
+3)picture : 이미지 활용에는 최고 해상도에 따라서 이미지가 바뀌게 됨.
+<picture>
+<source media="(min-width: 650px)" srcset="images/pink.png">	<!-- picture태그는 media의 min-width: value;의 value값 이상일 경우 띄워질 이미지를 정의한다. -->
+<source media="(min-width: 465px)" srcset="images/white.png">
+<img src="images/orange.png" alt="flowers" style="width: auto;"> <!-- width: auto => 너비를 자동으로 -->
+</picture>
+
+4)pre : html에서 줄을 구분하려면 p태그나 br태그를 사용해야하는데 작성한 그대로 줄바꿈이 가능한 pre태그
+
+5)progress : 진행률 표시
+모든 개발요소가 들어갈 때는 앞에 label이 나오는게 좋다.
+<label for="file">downloading progress : </label>
+<progress id="file" value="50" max="100"></progress>
+</pre>
+
+<h1>q</h1>
+<pre>
+1)q : 긴 인용문은 들여쓰기가 되고 짧은 인용문은 ""가 된다.
+<p>
+WWF's goal s to: 
+<q>Build a future where ~</q>
+we hope they succed.
+</p>
+</pre>
+</body>
+</html>

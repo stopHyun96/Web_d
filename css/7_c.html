@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS_c</title>
+<link rel="stylesheet" href="css/css3.css">
+</head>
+<body>
+<h1>C</h1>
+<pre>
+1)@charset : 스타일 시트에 사용하는 문자 인코딩을 지정한다.
+항상 스타일 시트의 첫번째 요소이며 어떤 문자도 그 앞에 오면 안된다.
+쓰지 않아도 큰 문제는 없으나 나중에 생길 변수에 대해서 대비하는 개념
+
+2)clear : 부동 요소의 옆에 흐름을 제어
+플로팅 요소 옆에 있는 요소에 어떤 이벤트를 발생할지를 지정
+left: 왼쪽을 깔끔히
+right: 오른쪽을 깔끔히
+both: left, right 둘다 깔끔히
+레이아웃에 관련되어 있는 css인데 결론은 왼쪽 깔끔히 오른쪽을 깔끔히 날려버린다.
+
+3)clip-path : 
+3-1)clip : crop기능 기존에 있던 컨텐츠를 지정한크기로 자름
+<img src="images/pic.png" alt="이미지 입니다" class="imgsize auto">
+<img src="images/pic.png" alt="이미지 입니다" class="imgsize rect-25">
+<img src="images/pic.png" alt="이미지 입니다" class="imgsize rect-50">
+
+4)color : 모든 요소의 텍스트 색상값을 지정
+5)column-count : 많은 텍스트에서 열로 나눠주는 형태 (다단)
+6)column-fill : 균형 여부에 관계없이 열을 채우는 방법을 지정한다.
+7)column-gap : 열 사이의 간격을 지정한다.
+8)column-rule : 열사이의 규칙의 너비, 스타일 / 색상지정
+9)column-rule-color : 
+10)column-rule-style : 
+11)column-rule-width : 
+12)column-span : 요소가 걸쳐야하는 열 수를 지정
+all none
+13)column-width : 열의 너비 크기를 지정
+14)columns : column-width, column-count의 속기속성
+15)content : 가상의 선택자인 before하고 after 왼쪽 오른쪽 위 아래
+선택자 : after{content: "";}
+<ul>
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+
+16)counter-increment : 하나 이상의 css카운터 값을 늘리거나 줄인다
+일반적으로 counter-reset 속성 및 content 속성과 함꼐 사용된다.
+h가 나타날 때마다 번호를 증가시킨다.
+로마자로 번호를 쓰고 싶을 때는
+counter(my-sec-counter, upper-roman)". ";
+<h2></h2>
+<h2></h2>
+<h2></h2>
+<h2></h2>
+
+17)counter-reset : 하나 이상의 css카운터를 생성하거나 재생한다.
+18)cursor : 버튼 기능이 없는 엘리먼트에 강제적으로 커서 모양을 바꿀 때 사용
+<div onclick="go()" class="nb">button</div>
+<script type="text/javascript">
+function go() {
+	location.href="https://www.daum.net";
+}
+</script>
+
+</pre>
+<!-- 2)clear -->
+<img src="images/pic.png" alt="이미지 입니다." class="imgsize">
+<p class="clear">
+this is some text.this is some text.this is some text.this is some text.this is some text.this is some text.
+</p>
+
+<h1>clip-path</h1>
+<pre>이미지를 10% 원으로 자르기</pre>
+<img src="images/pic.png" alt="이미지 입니다" class="clip-path">
+
+<div class="news">
+영국 언론 ‘리버풀 에코’는 6일(한국 시간) 이탈리아 매체 ‘일 마티노’를 인용해 “리버풀이 버질 반 다이크가 부상으로 쓰러지자 김민재 영입을 노리는 것으로 알려졌다”고 보도했다.
+
+리버풀에는 세계 최고의 센터백 반 다이크가 있다. 하지만 최근 햄스트링 부상으로 쓰러졌다. 그런데 부상이 예상보다 심각하다. 정확한 부상 공백 시기는 알려지지 않았지만 꽤 긴 시간 경기에 나오지 못할 것으로 보인다.
+
+결국 리버풀은 새로운 센터백이 필요하다. 기존 센터백 자원으로는 그의 공백을 메우기 어렵기 때문이다. 여기서 등장한 이름이 바로 김민재다. 김민재는 이탈리아 나폴리 이적 후 바로 최정상급의 활약을 보여주고 있다.
+
+김민재는 바이아웃 조항도 있어 해외 구단들이 그를 영입하기 용이하다. 오는 7월 1일부터 15일까지 최대 5,000만 유로(약 665억 원)만 투자하면 김민재를 영입할 수 있다. 이에 다양한 팀들이 그를 주목하고 있다.
+
+영국 언론 ‘팀 토크’는 “김민재는 의심할 여지 없이 리버풀의 좋은 영입이 될 것이다. 반 다이크, 마팁의 장기적인 대체자가 될 것이다. 그의 영입은 환상적일 것”이라고 기대감을 나타냈다.
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/css3.css">
+<title>CSS_G</title>
+</head>
+<body>
+<h1>G</h1>
+<pre>
+1)grid : 아래에 예시에 속기속성입니다
+- grid-template-rows : 그리드 템플릿 행
+- grid-template-columns : 그리드 템플릿 열
+- grid-template-areas : 그리드 템플릿 영역
+- grid-auto-rows : 그리드 자동 행
+- grid-auto-columns :그리드 자동 열
+- grid-auto-flow : 그리드 자동 흐름
+
+
+2)grid-area : 그리드 레이아웃에서 그리드 항목의 크기와 위치를 지정하며
+아래속성의 약식 속성입니다
+- grid-row-start
+- grid-column-start
+- grid-row-end
+- grid-column-end
+
+3)grid-auto-columns : 그리드 열에 대한 기본크기를 설정
+4)grid-auto-flow : 자동배치된 항목이 그리드에 삽입되는 방식을 제어합니다
+- row : 기본값 각행을 채워 항목배치
+- column : 각열을 채워 항목배치
+- dense : 항목을 배치하여 그리드의 구멍을 채움
+- row dense : 각 행을 채워 항목을 배치하고 그리드의 구멍을 채웁니다
+- column dense : 각 열을 채워 항목을 배치하고 그리드의 구멍을 채웁니다
+
+5)grid-auto-rows : 그리드 컨테이너의 행 크기를 설정합니다 
+이속성은 크기가 설정되지 않은 행에만 영향을 줍니다
+
+
+6)grid-column : 그리드 레이아웃에서 그리드항목의 크기와 위치를 지정하며
+아래의 약식속성 입니다
+- grid-column-start
+- grid-column-end
+
+7)grid-column-gap : 열사이의 간격을 설정
+8)grid-column-end : 항목이 확장되는 열수 또는 항목이 끝나는 열라인을 정의
+- auto : 기본값 항목은 한열에 걸쳐있습니다
+- span n : 항목이 확장될 열수를 지정합니다
+- column-line : 항목표시를 종료할 열을 지정합니다
+
+9)grid-column-start : 항목이 시작되는 열줄을 정의합니다
+예시 grid-column-start:2 하면 두번째 부터 시작
+
+10)grid-gap : 행과 열사이의 간격을 지정
+11)grid-row : 그리드 레이아웃에서 그리드 항목의 크기와 위치를
+지정하며 아래속성에 약식속성입니다
+grid-row-start<!-- 
+ -->
+grid-row-end
+
+
+
+12)grid-row-end : 항목이 확장되는 행수 또는 항목이 끝나는
+행라인을 정의합니다(세로)
+
+13)grid-row-gap : 행사이의 간격을 정의
+14)grid-row-start : 행에서 순번대로 시작되게 지정
+15)grid-template-areas : 그리드 레이아웃내의 영역을 지정합니다
+16)grid-template-columns : 그리드 레이아웃의 열 수(너비)를 지정합니다
+17)grid-template-rows : 그리드 레이아웃의 행 수(높이)를 지정합니다
+18)gap : 
+</pre>
+<h1>첫번째 행의 높이가 150px인 3열 그리드 레이아웃을 만듭니다</h1>
+<nav class="grid-container">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+</nav>
+
+<h1>area이름을 정하고 그걸 여러번 써서 면적을 확보합니다</h1>
+<nav class="grid-container-2">
+	<div class="item item1">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">8</div>
+	<div class="item">9</div>
+	<div class="item">10</div>
+	<div class="item">11</div>
+	<div class="item">12</div>	
+</nav>
+<h1>모든 항목의 이름을 지정하고 바로 사용할수 있는 web page 
+템플릿을 만듭니다</h1>
+<div class="con">
+	<div class="item-1">header</div>
+	<div class="item-2">menu</div>
+	<div class="item-3">main</div>
+	<div class="item-4">right</div>
+	<div class="item-5">footer</div>
+</div>
+
+<h1>2.grid-area</h1>
+<div class="area">
+	<div class="it-1">1</div>
+	<div class="it-2">2</div>
+	<div class="it-3">3</div>
+	<div class="it-4">4</div>
+	<div class="it-5">5</div>
+	<div class="it-6">6</div>
+	<div class="it-7">7</div>
+</div>
+
+<h1>3.grid-auto-columns</h1>
+<div class="auto">
+	<div class="it1">1</div>
+	<div class="it2">2</div>
+	<div class="it3">3</div>
+	<div class="it4">4</div>
+	<div class="it5">5</div>
+	<div class="it6">6</div>
+</div>
+
+<h1>4.column & row</h1>
+<div class="g column">
+	<div class="i1">1</div>
+	<div class="i2">2</div>
+	<div class="i3">3</div>
+	<div class="i4">4</div>
+</div>
+
+<div class="g row">
+	<div class="i1">1</div>
+	<div class="i2">2</div>
+	<div class="i3">3</div>
+	<div class="i4">4</div>
+</div>
+
+<h1>grid-auto-rows</h1>
+<div class="rows">
+	<div class="r1">1</div>
+	<div class="r2">2</div>
+	<div class="r3">3</div>
+	<div class="r4">4</div>
+	<div class="r5">5</div>
+	<div class="r6">6</div>
+</div>
+
+<h1>grid-column-end</h1>
+<div class="end">
+	<div class="e1">1</div>
+	<div class="e2">2</div>
+	<div class="e3">3</div>
+	<div class="e4">4</div>
+	<div class="e5">5</div>
+	<div class="e6">6</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS_b</title>
+<link rel="stylesheet" href="css/css3.css">
+</head>
+<body>
+<h1>B</h1>
+<pre id="top">
+1)backdrop-filter : 뒤에 있는 요소에 필터(포토샵에서 쓰는 효과)를 준다.
+요소 뒤 영역에 그래픽 효과를 적용하는데 사용
+- blur() : 흐림 효과
+- brightness() : 밝기 조절
+- contrast() : 어두운 영역
+- drop-shadow() : 그림자
+- grayscale() : 흑백
+- hue-rotate() : 색상값 회전
+- invert() : 반전(컬러 흑백(밝은 영역이 어두워 지고 어두운 영역이 밝아짐))
+- opacity() : 투명도
+- sepia() : 왜 만들었는지 모르겠다네 의미없다고
+- saturate() : 채도
+<div class="bg">
+	<div class="transbox">
+		<p>backdrop-filter : blur(5px)</p>
+	</div>
+</div>
+
+2)backface-visibility : 요소의 뒷면을 표시되어야 하는지 여부를 정함.
+부정의 의미(hidden), 긍정(visible)
+<div class="flip hidden">div 1</div>
+<div class="flip">div 2</div>
+
+3)background-blend-mode : 배경이미지를 혼합
+- mulitiply : a와 b가 혼합되어 둘 다 보여짐
+- screen : b가 비쳐서 보여짐
+- overlay : b가 비쳐서 보여짐
+- darken : 둘다 어둡게 보여짐
+- lighten : 둘다 밝게 보여짐
+- color-dodge : 색상에 변화가 진하게 변경
+- saturation : 채도가 올라감
+- color : b가 비쳐서 보여짐
+-luminosity : b가 비쳐서 보여짐
+<div class="blend"></div>
+
+4)block-size : 블록 방향의 요소 크기를 지정
+<div class="block-size">block size</div>
+5)border-block : 아래 속성에 속기 속성입니다
+border와 유사하지만 border-block 속성은 블록 방향에 따라 다르다
+writing-mode를 사용하여 블록방향을 정의합니다
+<div class="b-block">
+<p>쓰기 모드 속성값을 vertical-rl로 설정하면 border-block속성의 영향을 받는 테두리가 왼쪽과 오른쪽이 된다.</p>
+</div>
+
+5-1)border-block-width : 보더블록 테두리 너비
+5-2)border-block-style : 보더블록 테두리 스타일
+5-3)border-block-color : 보더블록 테두리 색상
+6)border-collapse : 테이블의 테두리가 단일 테두리로 축소되어야 하는지 분리되어야 하는지를 정한다.
+<table class="table1">
+<tr>
+	<th>f</th>
+	<th>l</th>
+</tr>
+<tr>
+	<td>f</td>
+	<td>l</td>
+</tr>
+</table>
+
+<table class="table2">
+<tr>
+	<th>f</th>
+	<th>l</th>
+</tr>
+<tr>
+	<td>f</td>
+	<td>l</td>
+</tr>
+</table>
+
+
+7)border 그 외 : 
+<h1>border radius 값 사방이 모두 다르게</h1>
+<div class="vs-border"></div>
+
+<h1>border-end-end-radius, border-end-start-radius</h1>
+<div class="border-start-end"></div>
+
+<h1>border-inline : left, right</h1>
+<div class="border-inline">inline</div>
+
+8)bottom : 상(top)좌(left)우(right)하(bottom)에서 하단 좌표값
+<a href="#top" class="top">TOP</a>
+<a href="#down" class="down">DOWN</a>
+
+9)box-decoration-break : 요소의 상자가 조각화될 때 요소의 배경, 패딩, 테두리, 이미지, 상자그림자,
+여백 및 클립경로가 적용되는 방식을 지정
+9-1)slice : 장식요소가 정체에 적용되며 요소 조각의 가장자리에서 끓어진다. 기본값
+9-2)clone : 조각이 개별 요소인 것처럼 각 조각에 적용된다.
+<span class="clone">css<br>is<br>easy<br>to learn</span>
+<span id="down" class="slice">css<br>is<br>easy<br>to learn</span>
+
+10)box-reflect : 요소의 반사를 만드는데 사용
+10-1)below : 아래에 반사를 만든다.
+10-2)above : 위에 반사를 만든다.
+10-3)left : 왼쪽에 반사를 만든다.
+10-4)right : 오른쪽에 반사를 만든다.
+<img src="images/orange.png" class="reflect">
+
+11)box-shadow : 그림자 생성
+<div class="box-shadow">
+그림자를 생성한다.
+</div>
+
+12)box-sizing : 가로 40 세로 40 사각형이 있는데
+여기에 테두리로 8px를 돌리면 원래 크기보다 커지게 된다.
+12-1)box-sizing : border-box(사각형 안에 테두리 포함);
+12-2)box-sizing : content-box(크기가 부풀게 된다);
+테두리나 패딩에 영향을 받게 된다.
+<aside class="border-box">
+난 보더 박스
+</aside>
+
+<aside class="content-box">
+난 콘텐츠 박스
+</aside>
+
+13)break-after : 지정된 요소 다음에 페이지 나누기
+단 나누기 또는 영역 나누기를 발생해야 하는 여부를 정한다.
+13-1)all : 기본 상자 바로 뒤에 페이지 나누기를 삽입
+13-2)always : 항상 요소 뒤에 페이지 나누기를 삽입
+13-3)avoid : 요소 뒤의 페이지/열/영역 나누기 방지
+13-4)avoid-column : 요소 뒤의 열 나누기 방지
+13-5)avoid-page : 요소 뒤의 페이지 나누기 방지
+13-6)avoid-region : 요소 뒤의 영역 나누기 방지
+13-7)column : 항상 요소뒤에 단 나누기 삽입
+13-8)left : 다음 페이지가 왼쪽 페이지로 서식이 지정되도록 요소 뒤에 하나 또는 두개의 페이지 나누기 삽입
+13-9)page : 항상 요소 뒹 ㅔ페이지 나누기 삽입
+13-10)recto : 다음 페이지가 직사각형 페이지로 서식이 지정되도록 기본 상자 뒤에 하나 또는 두개의 페이지 나누기를 삽입
+13-11)right : 다음 페이지가 올바른 페이지로 서식이 지정되도록 요소 뒤에 하나 또는 두개의 페이지 나누기를 삽입
+13-12)verso : 다음 페이지가 verso페이지 형식이 되도록 기본상자 뒤에 하나 또는 두개의 페이지 나누기를 삽입
+<footer>
+copyright (c) all right reserved
+copyright (c) all right reserved
+copyright (c) all right reserved
+copyright (c) all right reserved
+</footer>
+
+
+14)break-before : 
+15)break-inside : 
+</pre>
+</body>
+</html>

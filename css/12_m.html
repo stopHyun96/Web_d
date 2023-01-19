@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS_M</title>
+<link rel="stylesheet" href="css/another.css">
+<link rel="stylesheet" href="css/css3.css">
+</head>
+<body>
+	<h1>M</h1>
+	<pre>
+	@media : 반응형 사이트를 만들 때 해상도에 따른 css를 설정할 때 사용
+	해상도에 따른 백그라운드 컬러변경을 해본다.
+	
+	margin: 바깥 여백 반대 안쪽 여백(padding)
+	- 4자리 : 상 우 하 좌
+	margin : 0 0 10px 0;
+	- 3자리 : 상 좌우 하
+	
+	- 2자리 : 상하 좌우
+	- 1자리 : 4면 동일
+	
+	한쪽 면만 필요할 경우
+	- margin-left : 
+	- margin-right : 
+	- margin-top : 
+	- margin-bottom : 
+	
+	margin-block: 블록방향의 시작과 끝 여백을 지정하고 아래 속성의 약식속성
+	top와 bottom에 대한 묶음 마진이다.
+	margin-block-start, margin-block-end 
+	<div class="top">top</div>
+	<div class="middle">middle</div>
+	<div class="bottom">bottom</div>
+	
+	margin-inline: 아래의 속기 속성
+	margin-inline-start: margin-left
+	margin-inline-end: margin-right
+	
+	<div class="flex">
+	<div class="orange">L</div>
+	<div class="blue">M</div>
+	<div class="orange">M</div>
+	</div>
+	
+	block(top과 bottom)inline(left, right)
+	
+	max-width: 요소의 최대 너비를 정한다.
+	- 정한 최대 크기가 그 이상을 넘지 못한다.
+	- 최대한의 크기 max-width: 600px; => 600px이하를 의미
+	<div class="none">width</div>
+	<div class="mw">width</div>
+	
+	max-height: 최대 길이를 지정
+	min-width: 요소의 최소 너비 반응형일 경우 최소한의 크기가 (그 이상)
+	min-height: 요소의 최소 높이
+	스크롤바를 움직여도 화면을 줄여도 항상 그 크기를 유지한다.
+	
+	<div class="yellow">min-width: none</div>
+	<div class="yellow m-w">min-width: 500px</div>
+	
+	max-block-size : 블록 방향에서 요소의 최대크기를 지정(세로)
+	max-inline-size : 인라인 방향에서 요소의 최대크기를 지정(가로)
+	min-block-size : 요소의 최소크기를 블록방향으로(세로)
+	min-inline- size : 요소의 최소크기를 인라인 방향으로(세로)
+	mix-blend-mode: 요소의 내용이 직접 상위배경과 혼합되는 방식을 지정
+	<div class="flex">
+	<div class="mbs">max-block</div>
+	<div class="mis">max-inline</div>
+	<div class="mis_1">min-block</div>
+	<div class="mis_2">min-inline</div>
+	</div>
+
+	</pre>
+	<div class="media">해상도에 따라서 배경색이 바뀐다.</div>
+	
+	<div class="bgr">
+	<img alt="" src="images/orange.png">
+	</div>
+</body>
+</html>

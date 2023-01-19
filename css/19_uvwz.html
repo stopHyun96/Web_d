@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/css3.css">
+<title>CSS_U,V,W,G</title>
+</head>
+<body>
+<h1>U</h1>
+<pre>
+- user-select : 요소의 텍스트를 선택할수 있는지 여부를 지정합니다
+- none : 텍스트 선택 방지
+- text : 텍스트 선택 가능
+- all : 더블클릭이 아닌 클릭한번으로 텍스트 선택
+</pre>
+
+<h1 class="NOP">텍스트는 선택 할수 없어요</h1>
+
+<h1>V</h1>
+<pre>
+- vertical-align : 세로에 대한 정렬 속성 
+변수도 많고 제대로 css가 먹지 않는 경우가 있음 =>
+display:flex, align-items:center를 사용하세요
+
+- visibility : 요소가 표시되는지 여부를 정함
+- visibility(보임), hidden(숨김)
+=> display:block, display:none;
+</pre>
+
+<h1>W</h1>
+<pre>
+- white-space : 요소 내부의 공백을 처리하는 방법을 지정합니다
+- nowrap : 감싸지 않음
+- pre : 공백이 브라우저에 의해 유지 됩니다
+- pre-line : 일련의 공백은 단일 공백으로 축소됩니다
+  텍스트는 필요할때 줄바꿈이 됩니다
+- pre-wrap : 텍스트는 필요할때 줄바꿈이 됩니다
+
+- widows : 열에 맨위에 남겨두어야 하는 최소줄수를 지정
+- width : 요소의 너비를 설정
+- word-break : 줄끝에 도달했을때 단어가 어떻게 끊어져야 하는지
+지정
+-break-all : 오버플로우를 방지 하기 위해서 모든 문자에서 
+단어가 끊어질수 있습니다
+-keep-all : 중국/일본/한국어 텍스트에는 분리를 사용하면 안됨
+-break-all :
+- word-spacing : 자간
+- word-wrap : 긴단어가 끊어지고 다음줄로 넘어갈수 있도록 허용
+=>word-break와 상동
+- writing-mode : 텍스트라인을 수평으로 배치할지 수직으로
+배치할지 지정합니다
+-horizontal-tb : 텍스트가 왼쪽에서 오른쪽으로
+오른쪽으로 가로로 위에서 아래로 세로로 흐르도록 합니다
+-vertical-rl : 수직위에서 아래로 수평으로 오른쪽에서 왼쪽으로
+흐르도록 합니다
+-vertical-lr : 수직위에서 아래로 수평으로 왼쪽에서 오른쪽으로
+흐르도록 합니다
+</pre>
+
+<h1>Z</h1>
+<pre>
+z-index : 요소의 스택순서를 지정
+튀어나옴에 정도를 표시할때 사용
+</pre>
+
+<p class="cword">Thisissomeveryveryverylong word. This text will break at any character.</p>
+
+<div class="z2">z-index:2</div>
+<div class="z1">z-index:1</div>
+<div class="z0">z-index:0</div>
+<div class="z-1">z-index:-1</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

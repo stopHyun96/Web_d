@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS_P</title>
+<link rel="stylesheet" href="css/another.css">
+</head>
+<body class="h-4000">
+<h1>P</h1>
+<pre>
+1)perspective : 3d를 구현할 때 원근감을 설정
+- 객체가 사용자로부터 얼마나 멀리 떨어져 있는지를 정의한다.
+- 값이 낮을수록 3d효과가 더 강하게 나타난다.
+- 부모 속성에 적용을 시켜야 화면에서 구현된다.
+
+2)perspective-origin : left, right
+
+3)place-content : flex와 grid에서 사용한다.
+아래의 약식 속성이다.
+- align-content
+- justify-content
+
+4)place-items : 그리드 레이아웃에서 사용되며 아래의 속기속성이다.
+align-items, justify-items
+start (align-items: start, justify-items: center)
+속성에 하나의 값이 있는 경우는 (모두 end)
+
+5)place-self : 개별 그리드 항목을 정렬하는데 사용하고 아래 속성의 약식 속성이다.
+align-self, justify-self
+
+6)position
+- static : 기본값 문서의 흐름에 나타나는 순서대로 랜더링
+- absolute : 혼자 노는 포지션 상대적인 것(위의 요소에 영향을 받지 않음)과 절대적으로 요소가 움직여야
+할 때 사용 
+- fixed : 브라우저 창을 기준으로 배치 
+- relative : 일반위치를 기준으로 배치 요소의 left위치에 20px정도를 추가하여 배치된다.
+- sticky : css를 사용하여 배치되어야 하는 포지션을 정해주고 스크롤바가 포지션: sticky부분을 지나갈 때 
+그 순간 지정된 위치 값으로 간다.
+</pre>
+<h1>3D</h1>
+<div class="pers">parents
+<div class="rec">div-child</div>
+</div>
+
+<h1>3d cube</h1>
+<div class="ex4">
+	<div class="cube_2">
+		<div class="side front">1</div>
+		<div class="side back">6</div>
+		<div class="side right">4</div>
+		<div class="side left_2">3</div>
+		<div class="side top_2">5</div>
+		<div class="side bottom">2</div>
+	</div>
+</div>
+
+<div class="place-content">
+<div class="red">red</div>
+</div>
+
+<h1>place-items</h1>
+
+<div class="place-items">
+	<div></div>
+	<div class="p-self"></div>
+	<div></div>
+	<div></div>
+</div>
+
+<div class="sticky">
+I am sticky!
+</div>
+
+</body>
+</html>

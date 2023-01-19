@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/css3.css">
+<title>CSS_T</title>
+</head>
+<body>
+<h1>T</h1>
+<pre>
+1)table-layout : 테이블 셀,행,열을 배치하는데 사용되는 알고리즘을 
+정의합니다 (요점 : 테이블이 훨씬 빠르게 렌더링 됩니다)
+1-1)auto : 브라우저는 자동 테이블레이아웃 알고리즘을 사용
+1-2)fixed : 고정 테이블 알고리즘 설정(페이지가 훨씬 빠르게 로드)
+<table class="table">
+<tr>
+<th>one</th>
+</tr>
+</table>
+2)text-align : 텍스트에 가로 정렬을 지정합니다
+- left : 왼쪽
+- right : 오른쪽 
+- center : 가운데
+- justify : 블록형태에 글씨가 동일하게 정렬
+3)text-align-last : 텍스트에 마지막줄을 정렬하는 방법을 
+지정합니다
+- auto : 자동 기본값
+- left : 마지막 줄이 왼쪽으로 정렬
+- right : 마지막 줄이 오른쪽으로 정렬
+- center : 마지막 줄이 가운데 정렬
+- start :텍스트방향이 오른쪽이면 마지막 줄이 오른쪽
+왼쪽부터 시작했으면 왼쪽으로 
+- end : 오른쪽인 경우 오른쪽 오른쪽에서 왼쪽인경우는 왼쪽
+! text-align:justify를 설정하고 쓰셔야 합니다 
+
+4)text-decoration : 텍스트를 꾸미는 방식을 설정
+(text-decoration-color,line,style,thickness)
+<h1 class="overline">h1</h1>
+<h2 class="line-through">h2</h2>
+<h3 class="underline">h3</h3>
+<h4 class="uo">h4</h4>
+
+5)text-indent : 들여쓰기 입니다 (첫줄을 들여씁니다)
+한줄을 들여쓰기 할때 효과적 장문에 멀티라인은 차라리 
+padding-left로 표현하시면 좋습니다
+6)text-justify : text-align을 justify로 설정했을때 
+양쪽 맞춤을 설정 
+- inter-word : 단어사이의 간격을 늘리거나 줄입니다
+흡사 => word-spacing
+
+- inter-character : 문자사이의 간격을 늘이거나 줄입니다
+흡사 => letter-spacing 
+
+7)text-orientation : 문자방향을 지정합니다
+단 쓰기모드가 세로로 설정된 경우에만 작동됩니다
+- mixed : 기본값 문자가 시계방향으로 90도 회전
+- upright : 회전하지 않고 똑바로 서있는 형태
+- sideways : firefox에서만 지원  쓰기 모드에서
+시계방향으로 90도 수직 텍스트 행방향과 동일
+- sideways-right : 속성과 값과 동일
+- use-glyph-orientaion : 텍스트가 더이상 사용되지 않고
+glyph-orientaion-vertical / glyph-orientaion-horizontal
+을 상속하도록 SVG요소에서 사용합니다
+
+8)text-overflow : 지정한 일정크기를 넘어설때 ...
+텍스트 오버플로우에 대한 표시방식을 설정
+아래에 적는 속성이 꼭 필요합니다
+white-space:nowrap;
+overflow:hidden;
+
+- clip : 기본 텍스트가 잘림 (레이아웃에서 이상해보임)
+- ellipsis : 잘라진 텍스트 표시를 위해 줄임표를 렌더링
+
+<div class="ellipsis">
+오늘 몇시까지 갈까요? 2시 3시 4시
+</div>
+
+<div class="clip">
+오늘 몇시까지 갈까요? 2시 3시 4시
+</div>
+
+9)text-shadow : 텍스트에 그림자 설정
+- 2자리수 가로 세로(좌표) 색상
+- 3자리수 가로 세로 블러 색상
+<h1 class="s_1">shadow</h1>
+<h1 class="s_2">shadow-blur</h1>
+
+10)text-transform : 텍스트를 대문자 또는 소문자 앞에만 대문자
+- uppercase
+- lowercase
+- capitalize
+11)top : 엘리먼트가 문서에서 위치하는 상단에 간격을 설정
+<div class="absolute-top"></div>
+
+12)transform : 엘리먼트를 회전,기울기 및 크기조정
+- rotate  : 회전
+- skew : 기울기
+- scale : 크기
+
+<div class="rt">rotate</div>
+<div class="sk">skew</div>
+<div class="sl">scale</div>
+transform-origin : 위치를 변경
+transform-style : preserve-3d,flat
+
+13)transition : 장면이 전환될때 
+아래에 속기속성
+transition-property
+transition-duration
+transition-timing-function
+transition-delay
+
+
+<div class="up"></div>
+
+14)translate : 2d엘리먼트에서 요소의 위치 / 좌표를 정의합니다
+<div class="translate">position</div>
+
+
+</pre>
+<p class="last">텍스트방향이 오른쪽이면 마지막 줄이 오른쪽
+왼쪽부터 시작했으면 왼쪽으로텍스트방향이 오른쪽이면 마지막 줄이 오른쪽
+왼쪽부터 시작했으면 왼쪽으로텍스트방향이 오른쪽이면 마지막 줄이 오른쪽
+왼쪽부터 시작했으면 왼쪽으로 왼쪽부터 시작했으면 왼쪽으로왼쪽부터 시작했으면 왼쪽으로</p>
+
+<div class="mixed">
+<h1>text-orientation:mixed</h1>
+</div>
+<div class="upright">
+<h1>text-orientation:upright</h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

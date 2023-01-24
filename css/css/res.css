@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+html, html * {
+margin:0;
+text-transform:capitalize;/*앞글자만 대문자*/
+box-sizing:border-box;
+}
+
+.aside{
+background:yellow;
+padding:20px;	
+}
+.text-center{
+text-align:center;
+}
+.text-white{
+color:white;
+}
+.header{
+padding:60px;
+background:#1abc9c;	
+}
+.nav{/*전체적인 메뉴에 폼을 잡고*/
+display:flex;
+background:#333;
+}
+.nav a{
+color:white;
+padding:14px 20px;
+text-decoration:none;
+text-align:center;
+}
+.nav a:hover{/*ui/ux에 맞게 사용자 편의로 내가 뭘선택하고 있는지에 대한
+css */
+background:#ddd;
+color:black;
+}
+
+.side{
+flex:30%;
+background-color:#f1f1f1;
+padding:20px;		
+}
+.main{
+flex:70%;
+background-color:#fff;	
+padding:20px;
+}
+.row{
+display:flex;
+flex-wrap:wrap;/*엘리먼트를 감쌈*/
+}
+.upper{
+text-transform:uppercase;/*모든 영문자를 대문자로*/
+}
+.fakeimg{
+background:#aaa;
+width:100%;
+padding:20px;
+}
+.h-200{
+height:200px;	
+}
+.h-60{
+height:60px;	
+}
+.footer{
+padding:20px;
+text-align:center;
+background:#ddd;
+}
+
+@media (max-width:768px){
+	.row, .nav{
+	flex-direction:column;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

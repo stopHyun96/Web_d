@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+.another{
+color:blue;
+font-size:24px;
+}
+.middle{
+border:solid black 1px;
+margin-block-start:100px;
+/*margin-block:100px;*/
+}
+.flex .blue{
+margin-inline:100px;
+}
+.none, .mw{
+background:coral;
+height:100px
+}
+.mw{
+max-width:150px;/*정해진 크기를 fix하는 개념*/
+max-height:50px !important;
+}
+.yellow{
+background:yellow;
+}
+.m-w{min-width:500px;}
+/*화면해상도가 줄어들어도 최소한 크기를 뷰여하고싶을때 사용*/
+.mbs{
+background-color:lightblue;
+border:solid black 1px;
+width:100px;
+max-block-size:60px;
+}
+.mis{
+margin-inline:100px;
+background-color:lightblue;
+border:solid black 1px;
+max-inline-size:60px;	
+}
+.mis_1{
+background-color:lightblue;
+border:solid black 1px;	
+width:100px;
+min-block-size:200px;
+margin-inline-end:100px;
+}
+.mis_2{
+background-color:lightblue;
+border:solid black 1px;		
+min-inline-size:200px;
+}
+.bgr{
+background:red;
+padding:15px;
+}
+.bgr img{
+mix-blend-mode:darken;
+}
+.o-f{
+width:10px;
+height:300px;
+padding:20px;	
+border:1px solid #ccc;
+}
+/*img{
+width:50px;
+height:400px;
+object-fit:none;
+border:5px solid red;
+object-position:20px 40px;	
+}*/
+.hover-2{
+opacity:0.5;
+border:none;
+}
+.hover-2:hover{
+cursor:pointer;
+opacity:1;
+border:2px solid black;
+}
+.red{background:red;}
+.main_2{
+width:400px; height:150px;
+border:1px solid #c3c3c3;
+display:flex;	
+}
+.main_2 > div{
+width:70px;
+height:70px;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.main_2 > div:nth-child(1){order:2;}
+.main_2 > div:nth-child(2){order:4;}
+.main_2 > div:nth-child(3){order:3;}
+.main_2 > div:nth-child(4){order:1;}
+
+.circle{
+width:100px;
+height:100px;
+background:blue;
+border-radius:50%;
+border:5px solid white;
+outline:2px solid blue;
+}
+.d1{font-size:100px;}
+.auto, .hidden, .of-x{
+width:100px;
+background-color:green;
+}
+.auto{
+overflow:auto;
+}
+.hidden{
+overflow:hidden;
+}
+.of-x{
+overflow-x:auto;
+}
+
+/*3d*/
+.pers{
+position:relative;
+height:150px;
+width:150px;
+margin-left:60px;
+border:1px solid blue;
+perspective:200px;
+}
+.rec{
+padding:50px;
+position:absolute;/*포지션값을 자유자재로 
+절대적으로 갖기 위해서*/
+border:1px solid black;
+background:rgba(100,100,100,.5);
+transform-style:preserve-3d;
+transform:rotateX(45deg);
+}
+
+/*cube*/
+.ex4{perspective:800px;
+perspective-origin:right;
+}
+.cube_2{
+font-size:4em;
+width:2em;
+margin:1.5em auto;
+transform-style:preserve-3d;
+transform:rotateX(-45deg) rotateY(30deg);
+}
+.side{
+position:absolute;
+width:2em;
+height:2em;
+background:rgba(100,100,100,.5);
+border:1px solid red;
+text-align:center;
+line-height:2em;
+}
+.front{transform:translateZ(1em);}
+.top_2{transform:rotateX(90deg) translateZ(1em);}
+.right{transform:rotateY(90deg) translateZ(1em);}
+.left_2{transform:rotateY(-90deg) translateZ(1em);}
+.bottom{transform:rotateX(-90deg) translateZ(1em);}
+.back{transform:rotateX(-180deg) translateZ(1em);}
+
+.place-content{
+display:flex;
+width:100%;
+height:100px;
+border:1px solid #ccc;
+flex-wrap:wrap;
+place-content:center center;
+}
+.place-content > div{
+	flex-basis:40px;
+	height:40px;
+}
+
+.place-items{
+width:60%; aspect-ratio:3/2;
+border:solid black 1px;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:1fr 1fr;
+place-items:end;
+}
+.place-items > div{
+width:60%; aspect-ratio:2;
+background:coral;
+}
+.p-self{
+border:solid black 3px;
+place-self:start;
+}
+.h-4000{
+height:4000px;	
+}
+.sticky{
+position:sticky;
+top:0;
+padding:5px;
+background:#cae8ca;
+border:3px solid #Acaf50;	
+}
+.resize{
+resize:none;	
+}
+.rotate{
+height:50px;width:50px;
+background:red;
+rotate:0deg;
+transition:all 0.2s ease-in;
+}
+.rotate:hover{
+rotate:30deg;	
+}
+
+.gc{
+border:1px solid black;
+background:mintcream;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+row-gap:50px;
+}
+.gc > div{
+background:yellow;
+margin:3px;
+}
+.scale{
+position:relative;
+left:70px;
+width:50px; height:50px; background-color:red;
+scale:2;	
+}
+.scale_2{
+position:relative;
+margin-inline:20px;
+margin-block:30px;
+width:50px; height:50px; background-color:red;	
+scale:1.5 110%;
+}
+html{
+scroll-behavior:smooth;
+}
+
+/*scroll-margin*/
+.scroll_2{
+width:80%;
+aspect-ratio:3/1;
+padding:40px 0;
+margin:auto;
+border:solid black 2px;
+overflow-x:hidden;
+overflow-y:scroll;
+scroll-snap-type:y mandatory;
+}
+.bb{
+background-color:lightblue;
+width:95%;
+aspect-ratio:3/1;
+}
+.gg{
+background-color:lightgreen;
+width:80%;
+aspect-ratio:4/1;
+}
+.gg, .bb{
+margin:2px; 
+scroll-snap-align:start;
+scroll-margin:20px;
+}
+.table{
+table-layout:fixed;
+}
+
+.last{
+text-align : justify;
+text-align-last:justify;
+}
+
+.overline{text-decoration:overline;}
+.line-through{text-decoration:line-through;}
+.underline{text-decoration:underline;}
+.uo{text-decoration:underline overline;}
+
+.mixed, .upright{
+writing-mode:vertical-lr;
+display:inline-block;	
+height:350px;
+width:300px;
+margin:5px;
+border:1px solid black;
+}
+.mixed{text-orientation:mixed;}
+.upright{text-orientation:upright;}
+
+.ellipsis, .clip{
+white-space:nowrap;
+overflow:hidden;
+width:100px;
+border:1px solid #000;	
+}
+.ellipsis{
+text-overflow:ellipsis;
+}
+.clip{
+text-overflow:clip;	
+}
+.s_1, .s_2{
+font-size:19px;
+color:white;
+}
+.s_1{
+text-shadow:2px 2px #000;
+}
+.s_2{
+text-shadow:2px 2px 20px #000;
+}
+.absolute-top{
+position:absolute;
+top:20px;
+border:10px solid green;
+width:100px; height:100px;
+}
+
+.rt, .sk, .sl{
+width:150px; height:80px; background:yellow;
+margin-block:20px;
+}
+.rt{transform:rotate(20deg);}
+.sk{transform:skewY(20deg);}/*y축으로 기울기*/
+.sl{transform:scaleY(1.5);}
+
+.up{width:50px; height:50px; background:violet;
+/*동작을 시작하기전에 주체에다가 속성 표현*/
+transition:width 2s ease-in;
+}
+.up:hover{width:300px;}
+.translate{
+height:90px;width:40px;background:red;
+translate:0px 0px;
+}
+.translate:hover{
+translate:200px 100px;	
+}
+.NOP{
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+}
+.cword{
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break:break-all;	
+}
+
+.z2, .z1, .z0, .z-1{
+width:100px;
+height:50px;
+position:relative;
+}
+.z2{
+z-index:2;
+background:red;
+left:100px;
+top:30px;
+}
+.z1{
+z-index:1;
+background:blue;
+left:95px;
+top:25px;
+}
+.z0{
+z-index:0;
+background:green;
+left:90px;
+top:20px;
+}
+.z-1{
+z-index:-1;
+background:yellow;
+left:85px;
+top:15px;	
+}
+
+
+
+
+
+
+
+
+
+

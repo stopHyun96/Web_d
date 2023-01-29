@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+html, html * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, snas-serif;
+}
+
+/* ++ nav ++ */
+.topnav {
+	overflow: hidden;
+	background: #333;
+}
+
+.topnav a {
+	float: left; /* 렌더링 왼쪽부터 정렬 */
+	display: block; /* 마우스를 가져갈 때 클릭하기 위해서 블록형태로 지정 */
+	text-decoration: none;
+	color: #f2f2f2; /* a태그가 기본적으로 가지고 있는 성격이 링크, 롤오버 등 색상값의 촌스러움을 방지 */
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color:black;
+}
+
+.topnav a.nav-active {
+	background-color: #04aa6d;
+	color: white;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+/* 모바일 nav */
+@media screen and (max-width: 600px) { /* 최대 크기가 600px 이하일 때 */
+	.topnav a:not(:first-child) {display: none;}
+	/* 탑 nav 클래스에서 첫번째 자식이 아닌 애들은 화면에서 숨겨라 */
+	.topnav a.icon {
+		float: right; /* 오른쪽 정렬 */
+		display: block;/* 화면에서 보이기 */
+	}
+}
+
+/* 햄버거 메뉴 클릭 시 숨겨진 a태그 요소들 나오기 */
+@media (max-width: 600px) {
+	.topnav.responsive {position: relative;} /* 하위 요소들이 각각 한줄로 나오게 하기 위해서 */
+	.topnav.responsive .icon {
+		position: absolute; /* 클릭하다가 위치가 바뀌어버리면 이상해 보여서 위치를 재조정 */
+		right: 0;
+		top: 0;
+	}
+	
+	.topnav.responsive a {
+		float: none; /* 줄로 나오게 float-left 풀기 */
+		display: block; /* 위에서 display: none 설정해서 보이기 위함 */
+		text-align: left;
+	}
+}
+
+/* slide show */
+.slideshow-container {
+	max-width: 100%;
+	/* border: 1px solid black; */
+	position: relative;
+	margin: auto;  /* 어떤 해상도에서든 가운데에 보이기 */
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute; /* 아래 부분에 존재하는걸 이미지의 가운데 왼쪽 오른쪽으로 배치 (자유롭게 포지션값을 주기 위함) */
+	width: auto;
+	top: 50%; /* 버티컬에서 가운데 */
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	margin-top: -22px;
+}
+
+.next {right: 0; border-radius: 3px 0 0 3px;}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, .8);
+}/* 마우스를 올리면 투명도 80% 검정 배경 */
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;  /* 텍스트를 적는 만큼 면적확보 */
+	text-align: center;
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;  /* 마우스를 가져갈 때 배경색상이 부드럽게 바뀌게 하기 */
+}
+
+.active, .dot:hover {
+	background-color: #717171;		
+}
+
+.dot-center {
+	text-align: center;
+}
+
+/* 슬라이드 애니메이션 설정 */
+.fade {
+	animation-name: fade; /* 애니메이션 명 (컨트롤하기 위함) */
+	animation-duration: 1.5s; /* 애니메이션 지속시간 */
+}
+
+@keyframes fade { /* 애니메이션 동작을 정함 그게 키프레임 */
+	from {opacity: .4}  /* 시작 불투명도 40% 0초 */
+	to{opacity: 1}		/* 1.5초 불투명도 100% */
+}
+
+@media (max-width: 600px) {
+	.prev, .next, .text {font-size: 11px;}
+}
+
+.s-img {
+	/* width: 100vw; */
+	width: 2600px; /* 27인치 모니터를 기준으로 */
+	max-width: 100%; /* 크기를 표현하고 뷰포트의 변화를 감지해서 최대 크기를 뷰포트의 100%에 맞춤 */
+}
+
+.mySlides {
+	display: none; /* 컨트롤 할 때마다 보여줘야 해서 */
+}
+
+/* tabs */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background: #f1f1f1;
+	display: flex;
+}
+
+.tab button {/* 버튼 클릭하기 전 상태 */
+	background-color: inherit;
+	/* float: left; */
+	border: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.tab button:hover {/* 버튼에 마우스가 올라갈때 */
+	background: #ddd;
+}
+
+/* 탭 메뉴가 활성화 되어있을 때 버튼의 배경색이 다르게 표현 */
+.tab button.active {
+	background-color: #ccc;
+}
+
+/* 탭메뉴 내용 */
+.tabcontent {
+	display: flex;
+	justify-content: space-between;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	/* display: none; */
+	opacity: 0;
+}
+
+.topright {/* x버튼 */
+	/* float: right; */
+	/* display: flex;
+	flex: 50%;
+	justify-content: flex-end;
+	position: absolute;
+	right: 20px;
+	margin-top: -120px; */
+	cursor: pointer;
+	font-size: 28px;
+}
+
+/* .left {
+	display: flex;	
+	flex: 50%;
+	flex-direction: column;
+} */
+
+.two, .three {
+	position: absolute; /* 개별로 움직여야 해서 */
+	margin-top: -53px;
+	width: 100%;	/* 페이지 전체으 ㅣ100%가 아니라 container가 허락한 영역 만큼의 100% */
+}
+
+.container {
+	position: relative; /* 위에 슬라이드 다른 영역이 생겨도 상대적으로 위치를 잡을 수 있게 해줌 */
+	width: 70%;
+	margin: 0 auto; /* 가운데 정렬 */
+}

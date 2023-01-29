@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>res_web</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- 폰트어썸 cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/front.js"></script>
+</head>
+<body>
+<!-- 네비게이션 -->
+<nav class="topnav" id="myTopnav">
+	<!-- pc버전에서의 일반적인 메뉴 -->
+	<a href="#home" class="nav-active">Home</a>
+	<a href="#news">News</a>
+	<a href="#contact">Contact</a>
+	<a href="#about">About</a>
+	
+	<!-- 모바일 햄버거 메뉴 -->
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	<i class="fa fa-bars"></i> <!-- 햄버거 메뉴 아이콘 -->
+	<!-- 햄버거 메뉴로 활용하기 위해서 기존에 링크속성이 가지고 있는 성격을 죽임 -->
+	</a>
+</nav>
+	<!-- 포토 슬라이더 -->
+	<article class="slideshow-container">
+		
+		<!-- 이미지가 들어가는 영역 -->
+		<div class="mySlides fade">
+			<div class="numbertext">1/3</div>
+			<img src="img/one.jpg" class="s-img">
+			<div class="text">Caption_1</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">2/3</div>
+			<img src="img/two.jpg" class="s-img">
+			<div class="text">Caption_2</div>
+		</div>
+		
+		<div class="mySlides fade">
+			<div class="numbertext">3/3</div>
+			<img src="img/three.jpg" class="s-img">
+			<div class="text">Caption_3</div>
+		</div>
+		
+		<!-- 좌우 버튼 -->
+		<a class="prev" onclick="plusSlides(-1)">&lsaquo;</a> <!-- 왼쪽 -->
+		<a class="next" onclick="plusSlides(1)">&rsaquo;</a>  <!-- 오른쪽-+ -->
+		
+	</article>
+	<!-- 도트 이동 -->
+	<br>
+	<div class="dot-center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>	
+	<script>
+		/* 슬라이드 */
+		let slideIndex = 1;	//보여지는 순서이자 1개라는 의미
+		showSlides(slideIndex); //슬라이드 인덱스를 보여주고 
+	
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+			//슬라이드 인덱스에 n을 더한다.
+		}
+	
+		/* 슬라이드 인덱스를 보여주고 순번에 맞게 추가 */
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		/* 큐런트 슬라이드 함수는 현재 선택된 슬라이드를 보여주고 */
+		}
+	
+		function showSlides(n) {
+			let q;
+			let slides = document.getElementsByClassName("mySlides");
+			//슬라이드는 도큐먼트에서 클래스명 "mySlides"를 찾고
+			let dots = document.getElementsByClassName("dot");
+			if(n > slides.length){slideIndex = 1}
+			//화면에서 로드되었을 때 첫번째 그림
+			if(n < 1) {slideIndex = slides.length}
+			//기존에 있던 이미지가 사라지고 다른 순번에 이미지가 보여지는 기능을 설정
+			for(q = 0; q < slides.length; q++) { //하나 이상일 때 무조건 반복문이 나온다
+				slides[q].style.display = "none";
+				//기존에 있던 이미지가 사라지고 새로운 이미지가 로드
+			}
+			
+			for(q = 0; q < dots.length; q++) {
+				dots[q].className = dots[q].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
+	<!-- tabs -->
+	<main>
+		<section class="container">
+			<div class="tab"><!-- 탭메뉴에 버튼 생성 -->
+				<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+					London
+				</button>
+				<button class="tablinks" onclick="openCity(event, 'Paris')">
+					Paris
+				</button>
+				<button class="tablinks" onclick="openCity(event, 'Tokyo')">
+					Tokyo
+				</button>
+			</div>
+			
+			<!-- 버튼을 클릭할 때 내용 -->
+			<div id="London" class="tabcontent">
+				<div class="left">
+					<h3>London</h3>
+					<p>London is ...</p>
+				</div>
+				<span class="topright">&times;</span>
+			</div>
+			<div id="Paris" class="tabcontent two">
+				<div class="left">
+					<h3>Paris</h3>
+					<p>Paris is ...</p>
+				</div>
+				<span class="topright">&times;</span>
+			</div>
+			<div id="Tokyo" class="tabcontent three">
+				<div class="left">
+					<h3>Tokyo</h3>	
+					<p>Tokyo is ...</p>
+				</div>
+				<span class="topright">&times;</span>
+			</div>
+			
+		</section>
+		<script type="text/javascript">
+			document.getElementById("defaultOpen").click();
+			//도큐먼트는 defaultOpen 아이디를 찾아서 클릭한다.
+		</script>
+	</main>
+</body>
+</html>

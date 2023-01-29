@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+.adi {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.overlay {
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed; /* 항상 이자리 고정을 위해 */
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0);
+	background-color: rgba(0,0,0,.9);
+}
+
+.overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	color: #818181;
+	font-size: 36px;
+	display: block;
+	transition: 0.3s;
+}
+
+.overlay a:hover {
+	color: #f1f1f1;
+}
+
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+
+/* 사이드 나브 */
+.sidenav {
+	width: 0; /* css에서 width를 0으로 만들고 스크립트에서 가로폭 강제구현 */
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: #111;
+	transition: 0.5s;
+	padding-top: 60px;
+	overflow-x: hidden; /* 가로폭 넘침 방지 */
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.sidenav .closebtn_1 {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+#main {
+	transition: margin-left .5s;
+	/* 장면 전환 용도를 마진 레프트 그리고 0.5초로 */
+	padding: 16px;
+}
+
+/* 스크롤 슬라이딩 나브 */
+.pb-2500 {
+	padding: 15px 15px 2500px 15px;
+	font-size: 72px;
+}
+
+#navbar {
+	top: -53px;
+	background-color: #333;
+	position: fixed;
+	width: 100%;
+	display: block;
+	transition: top 0.3s;
+}
+
+#navbar a {
+	display: block;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+html, html * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* 채팅창 */
+.open-button {
+	background: #555;
+	color: #fff;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 23px;
+	right: 28px;
+	width: 280px;
+}
+
+.chat-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+}
+
+.form-container {
+	max-width: 300px; /* 300px 이상으로 커지지 않음 */
+	padding: 10px;
+	background: #fff;
+}
+
+.form-container textarea {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+	resize: none;
+	min-height: 200px; /* 어떤 해상도에서든 200px 밑으로 떨어지지 않음 */
+}
+
+.form-container textarea:focus { /* 클릭 시 배경색이 바뀜 */
+	background: #ddd;
+	outline: none; /* 브라우저에서 파란색 포커스 테두리 방지 */
+}
+
+.form-container .btn {
+	background: #04aa6d;
+	color: #fff;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+.form-container .cancel {
+	background: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+	opcity: 1;
+}
+
+/* 미디어쿼리 */
+@media (max-height: 450px) { /* 최대 높이가 450px 이하일 때 */
+	.overlay a {font-size: 20px;}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+	/* canvasNav */
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+

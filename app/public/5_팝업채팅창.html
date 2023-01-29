@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>팝업채팅창</title>
+<link rel="stylesheet" href="css/nav.css">
+<script src="js/nav.js"></script>
+</head>
+<body>
+	<div id="navbar">
+		<a href="#home">home</a>
+		<a href="#news">news</a>
+		<a href="#contact">contact</a>
+	</div>
+
+	<!-- 클릭하면 채팅창인 ㅏ옴 -->
+	<button class="open-button" onclick="openForm()">chat</button>	
+	
+	<!-- 채팅창 -->
+	<div class="chat-popup" id="myForm">
+		<form action="/action_page.jsp" class="form-container">
+			<h1>chat</h1>
+			<label for="msg"><b>message</b></label>
+			<textarea placeholder="Type message.." name="msg"></textarea>
+			<button type="submit" class="btn">send</button>
+			<button type="button" class="btn cancel" onclick="closeForm">close</button>
+		</form>
+	</div>
+</body>
+</html>

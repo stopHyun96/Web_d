@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4_method</title>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/jqr.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Method</h1>
+<pre>
+.before() : 선택한 요소 앞에 새 요소를 추가하거나 다른곳에 있는 요소를 이동시킬 수 있다.
+<h2>새 요소 추가</h2>
+<p id="pup">위에 요소 추가</p>
+<h2>다른 곳으로 이동</h2>
+<h1 class="down">밑으로 이동</h1>
+<p id="before">내 밑으로 이동</p>
+
+.children() : 어떤 요소의 자식 요소를 선택한다.
+반대로 부모요소를 선택할 때는 .parent()를 사용한다.
+<p class="ip">A</p>
+<ul class="pr">
+  <li>lorem</li>
+  <li class="ip">ipsum</li>
+</ul>
+
+.click() : 선택한 요소를 클릭했을 때 특정 작업을 수행할 수 있게 하는 속성이다.
+<section class="sec">섹션을 클릭하면 테두리가 생김</section>
+
+.clone() : 선택한 요소를 복제한다.
+<h1 class="null"></h1>
+<span class="clone">내용을 복제</span>
+
+.css() : 선택자에게 css속성 값을 넣어준다.
+.delay() : 실행 중인 함수를 정해진 시간만큼 중지(연기)시킴
+slow 또는 fast로 정할 수 있다.
+<button class="click">click</button>
+<p class="updown">문단 up and down</p>
+
+.detach() : 선택한 요소를 문서에서 제거한다.
+.remove()와 같으나 .detach()는 제거한 요소를 저장하여 다시 사용할 수 있다.
+<h1>잘라내서 붙이기</h1>
+<h2 class="ce">top</h2>
+<h2 class="be">잘라져서 붙여짐</h2>
+<button id="cut">Cut!</button>
+<button id="paste">Paste!</button>
+
+.each() : 선택한 요소가 여러개일 때 각각에 대하여 반복하여 함수를 실행한다.
+<p class="color">빨강</p>
+<p class="color">파랑</p>
+<p class="color">초록</p>
+<p class="color">갈!</p>
+
+<h2>반복작업을 두번만 하고 빠져나온다.</h2>
+<p class="two">빨강</p>
+<p class="two">파랑</p>
+<p class="two">초록</p>
+<p class="two">갈!</p>
+
+.empty() : 선택한 요소의 내용을 지운다
+내용만 지울뿐 태그는 남아있다. 태그를 포함한 요소 전체를 제거할때는 .remove()를 사용
+<button class="empty">click</button>
+<header class="conremove">내용만 지워진다.</header>
+
+.fadeIn() : 선택한 요소를 서서히 나타나게 한다.
+기본값은 400, fase(200),slow(600)
+.fadeOut() : 선택한 요소를 서서히 사라지게 한다.
+.fadeToggle() : 선택한 요소를 서서히 나타나게 하고 서서히 사라지게한다.
+<button onClick="window.location.reload()">새로고침</button>
+<h1 class="fi">lorem ipsum</h1>
+
+<button class="tg">click</button>
+<h1 class="tgh1">toggle</h1>
+
+.find() : 어떤 요소의 하위 요소 중 특정 요소를 찾을 때 사용
+<p class="child">
+<span class="lo">lorem</span>
+<span class="ip">ipsum</span>
+<span class="do">dolor</span>
+</p>
+
+.get() : 선택한 요소를 배열(Array)로 가져온다.
+-.get() : 모든요소를 가져온다
+-.get(index) : 특정 인덱스의 요소를 가져온다.
+<ul class="get">
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+<div class="append"></div>
+</pre>
+</body>
+</html>

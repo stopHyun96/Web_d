@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3_method</title>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/jqr.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Method</h1>
+<pre>
+.add() : 어떤 요소를 추가로 선택할때 사용
+예를들어 li요소를 선택하고 추가로 p요소를 선택한 후 violet색으로 만든다.
+<ul class="add">
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+<p class="addAfter">dolor</p>
+
+첫번째 li요소에 마우스를 올리면, 첫번째 li요소와 문단의 색을 green으로 바꿈
+<ul class="hover">
+  <li class="la"> Item one </li>
+  <li class="lb"> Item two </li>
+</ul>
+<p class="change">dolor</p>
+
+.addBack() : 현재 선택한 요소와 함께 이전에 선택한 요소도 선택하게 한다.
+예를들어 
+$('ul').find('li').addBack();
+
+<div class="addBack">
+	<p>lorem</p>
+	<p class="ip">lorem</p>
+	<p>lorem</p>
+</div>
+
+.addClass() : 선택한 요소에 클래스값을 추가한다.
+<h1 class="add">헤드라인</h1>
+<h2 class="add">헤드라인</h1>
+
+클래스 값을 삭제할 때는 removeClass()
+<h1 class="con bg bd">헤드라인</h1>
+<h2 class="con bg bd">헤드라인</h1>
+
+.after() : 선택한 요소 뒤에 새 요소를 추가하거나 다른곳에서 있는 요소를 이동시킬 수 있다.
+h1요소 뒤에 p요소를 추가
+<h1 class="gr">hello</h1>
+
+다른 예시 다른 곳으로 이동시킴
+<p class="bye">good bye!</p>
+<h2 class="move">lorem ip sum</h2>
+
+.animate() : 애니메이션 효과를 만든다.
+문법 - .animate(property[, duration][, easing][, complete])
+property : 효과를 줄 속성을 정함
+duration : 애니메이션 효과를 완료할 때까지 걸리는 시간
+(fast(200)나 slow(600)로 정할수 있다.)
+easing : 애니메이션의 효과 방식을 정한다.
+swing과 linear이 가능하며 기본값은 swing이다.
+complete : 요소가 사라진 후 수행할 작업을 정한다.
+아래의 예시에서는 버튼을 클릭 시 엘리먼트가 커진다.
+<p><button class="btn">Click!</button></p>
+<div id="rectblue"></div>
+
+<h2>swing과 lenear 비교</h2>
+<button class="vs">click!</button>
+<div id="lightblue"></div>
+<div id="pink"></div>
+
+.append() : 선택한 요소의 내용 끝에 컨텐츠 추가
+
+.appendTo() : 선택한 요소를 다른 요소 안에 넣어준다.
+<h1 class="head">헤드라인</h1>
+<span class="insert">span태그</span>
+<p>p태그</p>
+
+.attr() : 요소(element)의 속성(attribute)값을 가져오거나 속성을 추가한다.
+
+h1요소의 class속성의 값을 가져와서 출력한다.
+<h1 class="hello" id="find">안녕하세요</h1>
+<p>h1 class value is : <span class="inin"></span></p>
+
+<h2>속성 추가하기</h2>
+<input class="it" type="text">
+
+</pre>
+</body>
+</html>

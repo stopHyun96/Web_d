@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>1_intro</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+</head>
+<body>
+<h1>jquery 튜토리얼</h1>
+<pre>
+- jquery는 javascript 라이브러리 이다.
+- jquery는 javascript프로그래밍을 크게 단순화 한다.
+- 아래와 기본 지식이 있어야한다.
+(html, css, 자바스크립트)
+- 주로 애니메이션적인 요소들에 대해 사용한다.
+- 코드가 가볍고 단순하다.(예전에는 플래시라는 프로그램을 사용했지만 코드가 무겁고 swf라는 플레이어가 없으면 실행이 안됨.)
+- cdn을 사용해야만 사용할 수 있다.(선언하지 않으면 실행되지 않음)
+- cdn사용법은 일반적으로
+</pre>
+
+<h1>jquery 구문</h1>
+<pre>
+- 자바스크립트와 jquery는 형제와 같다.
+- 둘의 구분법 : jquery는 $(선택자)가 들어간다.
+	(jquery정의 / 엑세스)
+예시)
+$(this).hide() : 현재 요소를 숨김
+$("p").hide() : 모든 p요소를 숨김
+$(".class").hide() : 선택자 클래스를 숨김
+$("#id").hide() : 선택자 id를 숨김
+- 선택기는 이름, id, class, 유형, 속성, 속성값 등을 기반으로 html요소를 찾는데 또는 선택하는데 사용됨.
+- 선택기 종류
+$("*") : 모든 엘리먼트를 선택
+$(this) : 현재 html요소를 선택
+$("p.intro") : p중에 intro클래스를 가지는 요소 선택
+$("ul li:first") : ul의 첫번째 li요소를 선택
+$("tr:even") : 모든 짝수 tr요소를 선택
+$("tr:odd") : 모든 홀수 tr요소를 선택
+</pre>
+
+<h1>문서준비 이벤트</h1>
+<pre>
+$(document).ready(function() {
+//jquery 메서드 사용
+});
+이는 문서로드가 완료(준비)되기 전에 jquery코드가 실행되는걸 방지하기 위함
+
+속성
+$(function() {});
+</pre>
+
+<h1>이벤트</h1>
+<pre>
+- 웹페이지가 응답할 수 있는 모든 방문자의 행동을 이벤트라 한다.
+- 이벤트는 어떤 일이 발생하는 정확한 순간을 나타낸다.
+- 예시
+요소 위로 마우스 이동, 라디오버튼 선택, 요소클릭
+- bom, dom을 가지고 있음
+</pre>
+
+</body>
+</html>

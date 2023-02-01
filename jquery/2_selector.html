@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2_selector</title>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/jqr.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>selector</h1>
+<pre>
+- :button
+type이 버튼인 요소를 선택하는 선택자
+$(':button')
+$('.xy:button')
+$("button.xy")
+$("button")
+<input type="button" value="button 1" class="ab">
+<input type="button" value="button 2" class="cd">
+
+- :checked : 체크박스에서 선택한 요소, 라디오버튼에서 선택한 요소
+선택 목록에서 선택한 요소를 선택하는 선택자
+아래의 예시에서는 색을 선택하면 div요소의 배경색을 바꾼다.
+<p>color</p>
+
+<label>
+<input type="radio" name="color" value="blue">Blue
+</label>
+
+<label>
+<input type="radio" name="color" value="green">Green
+</label>
+
+<label>
+<input type="radio" name="color" value="red">Red
+</label>
+
+<div class="box">color</div>
+
+<h2>select</h2>
+<select>
+	<option value="">색상을 선택하세요</option>
+	<option value="coral">Coral</option>
+	<option value="violet">Violet</option>
+	<option value="black">Black</option>
+</select>
+<div class="box_2">color</div>
+
+
+- :contains() : 특정 문자열을 포함한 요소를 선택하는 선택자이다.
+대소문자를 구분한다.
+'p:contains("정")'
+<p>lorem</p>
+<p>lorem 정 jung</p>
+<p>lorem 저 jung</p>
+
+- :empty : 내용이 없는 빈 요소를 선택하는 선택자
+<table class="table">
+  <tr>
+  	<td>lorem</td>
+  	<td></td>
+  	<td>ipsum</td>
+  </tr>
+</table>
+
+- :even : 짝수 인덱스 요소를 선택하는 선택자이다. (0도 짝수취급)
+주의할 점은 첫번째 인덱스가 0부터 시작
+<ol class="even">
+<li>0.zero</li>
+<li>1.one</li>
+<li>2.two</li>
+<li>3.three</li>
+</ol>
+
+- :has() : 특정 요소를 포함하는 요소를 선택할 때 사용하는 선택자
+$('p:has(span)') : span요소를 가지고 있는 p요소를 선택
+
+하위 요소로 a요소를 갖는 li요소를 선택하여 빨간색 테두리를 만든다.
+<ul class="has">
+  <li>난 텍스트</li>
+  <li><a>안녕 난 a</a></li>
+</ul>
+
+
+- :nth-child() : 번째를 지정하여 선택
+<ol class="nc">
+  <li>one</li>
+  <li>two</li>
+</ol>
+
+- :odd : 홀수 인덱스를 선택하는 선택자
+인덱스가 0부터 시작
+<ol class="odd">
+<li>0.zero</li>
+<li>1.one</li>
+<li>2.two</li>
+<li>3.three</li>
+</ol>
+
+- :selected : checked를 대신 사용해도 된다.
+</pre>
+</body>
+</html>

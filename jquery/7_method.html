@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7_method</title>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/jqr-2.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Method</h1>
+<pre>
+.submit() : 이용하여 폼전송을 제어할 수 있다.
+<h2>select선택시 바로 폼 전송</h2>
+<form method="POST" id="h-form">
+	<select name="fruit" id="h-fruit">
+		<option value=""></option>
+		<option value="apple">apple</option>
+		<option value="banana">banana</option>
+	</select>
+</form>
+	
+<form method="POST" id="hform">
+	<select name="fruit" id="hfruit">
+		<option value=""></option>
+		<option value="apple">apple</option>
+		<option value="banana">banana</option>
+	</select>
+	<input type="submit" value="submit">
+</form>
+
+.text() : 선택한 요소 안의 내용을 가져오거나 다른 내용으로 바꾼다.
+.html()과 비슷하지만 태그의 처리가 다르다.
+<div class="tt">
+<h1>dkanrjsk</h1>
+</div>
+
+<div class="tt">
+<h1>dkanrjsk</h1>
+</div>
+
+<h2>삽입하는 태그는 글자로 인식</h2>
+<nav class="nav">
+<h1>logo</h1>
+</nav>
+
+<nav class="nav">
+<h1>hambuger</h1>
+</nav>
+
+.toggle() : 선택한 요소가 보이면 보이지않게 보이지않으면 보이게
+<p class="a">click to toggle</p>
+<p class="b">lorem</p>
+
+.toggleClass() : 클래스값을 넣었다 뺐다 할 수 있다.
+<button class="in-out">click</button>
+<h5 class="bgg">aaaaa</h5>
+
+.width() : 선택한 요소의 가로크기를 리턴하거나 가로크기를 변경한다.
+<div class="div-a">
+<p>to 500px</p>
+</div>
+<button class="width-div-a">click</button>
+
+.unwrap() : 선택한 요소의 상위 태그를 제거한다.
+<div class="black">
+<h1 class="remo">black</h1>
+</div>
+
+.val() : 선택한 요소의 값을 리턴하거나 값을 설정한다.
+<input type="text" id="jbInput">
+<button id="jbInputButton">click</button>
+
+<h2>select</h2>
+<select id="hSelect">
+	<option>선택</option>
+	<option>One</option>
+	<option>Two</option>
+	<option>Three</option>
+</select>
+
+<h2>input</h2>
+<input type="text" id="Input"><button id="InputButton">click</button>
+
+.wrap() : 선택한 요소를 원하는 태그로 감싼다.
+<h1>lorem ipsum</h1>
+<p>인용</p>
+<p class="c">good bye</p>
+
+.wrapAll() :  선택한 요소 모두를 새로운 태그로 감싸준다.
+<p class="wp">textxxt</p>
+<div>vvvvvvv</div>
+<p class="wp">textxxt</p>
+</pre>
+</body>
+</html>

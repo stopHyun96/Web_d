@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5_method</title>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 구버전에서 사용하던게 작동이 안되는 경우가 있을 수 있음. -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="js/jqr.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Method</h1>
+<pre>
+.has() : 특정요소를 가지고 있는 요소를 선택할 수 있다.
+<aside>광고</aside>
+<aside>광고를 <span>표현할 때</span></aside>
+
+.hide() : 선택한 요소를 사라지게 한다.
+<button class="hide1">hide</button>
+<div class="box box1"></div>
+
+.hover() : 선택한 요소에 마우스 포인터를 올렸을 때 그리고 마우스 포인터가 그 요소를 벗어났을 때 어떤 효과를
+넣을 수 있다.
+<main>lorem <span class="border">dolor</span> ipsum</main>
+
+.html() : 선택한 요소안의 내용을 가져오거나, 다른 내용으로 바꾼다.
+.text()와 비슷하지만 태그의 처리가 다르다.
+<div class="text">
+	<h1>여러개 있으면 첫번째 요소의 내용을 가져온다.</h1>
+</div>
+<div class="text">
+	<h1>여러개 있으면 첫번째 요소의 내용을 가져온다.</h1>
+</div>
+
+.load() : include(헤더나 푸터를 하나 생성하고 불러올 때)
+다른 문서 등에서 내용을 가져와 현재 문서에서 나타낸다.
+- php, jsp, react, node
+<div id="xy"></div>
+
+.not() : 선택한 요소 중 특정 선택자를 제외한 요소를 선택한다.
+<button class="not">click</button>
+<dl class="not">
+  <dt>제목_1</dt>
+  <dd class="ip">ipsum</dd>
+  <dt>제목_2</dt>
+  <dd>ipsum</dd>
+</dl>
+
+.offset() : 선택한 요소의 좌표를 가져오거나 특정좌표로 이동한다.
+<h5>lorem</h5>
+<h6>ipsum</h6>
+
+.parent() : 어떤 요소의 부모요소를 선택한다.
+<div class="ab">
+	<p>hello</p>
+	<div class="cd">
+		<p class="ef">lorem ipsum</p>
+	</div>
+</div>
+ef를 클래스 값으로 갖는 p요소의 부모요소가 cd를 클래스 값으로 갖는 div일 때
+내용을 빨간색으로 만든다.
+
+.prepend() : 선택한 요소의 내용 앞에 콘텐츠를 추가한다.
+<ul class="add">
+  <li>two</li>
+  <li>three</li>
+</ul>
+
+
+.prop() : 지정한 선택자를 가진 첫번째 요소의 속성값을 가져오거나 속성값을 추가한다.
+주의 할 점은 html에서의 속성이 아닌 자바스크립트의 입장에서 속성값이다.
+<from>
+<input type="checkbox" name="all" class="check-all"><label>Check All</label>
+<hr>
+<input type="checkbox" name="cb1" class="ch"><label>Check Box 1</label>
+<input type="checkbox" name="cb2" class="ch"><label>Check Box 2</label>
+<input type="checkbox" name="cb3" class="ch"><label>Check Box 3</label>
+</from>
+
+.remove() : 선택한 요소를 html문서에서 제거한다.
+태그까지 제거
+<button class="tag">click me!</button>
+<h1 class="rm">나는 제거 될 운명</h1>
+
+.removeAttr() : 선택한 요소의 특정 속성을 제거한다.
+<input type="text" name="address" placeholder="input address" class="ra">
+
+.removeClass() : 선택한 요소에서 클래스 값을 제거할 수 있다.
+<h1 class="bg bd">lorem ipsum dolor</h1>
+<h2 class="bg bd">lorem ipsum dolor</h2>
+
+.replaceWith() : 선택한 요소를 다른것으로 바꾼다.
+<button class="replace">click</button>
+<h3 class="change">p로 바꿈</h3>
+
+.reSize() : 윈도우 크기가 바뀔 때 어떤 작업을 할수 잇께 한다.
+<div class="size"></div>
+
+</pre>
+</body>
+</html>

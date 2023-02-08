@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>table</title>
+</head>
+<body>
+<div class="container"> <!-- 화면에서 차지하는 전체 면적을 얘기한다. -->
+	<div class="row"> <!-- 줄의 개념 -->
+		<div class="col-12">
+		<h1>table</h1>
+<pre class="pre-scrollable">
+- 기본테이블 : .table
+- 줄무늬 행 : .table-striped
+- 테두리 테이블 : .table-bordered
+- 호버 행 : .table-hover
+- 블랙다크테이블 : .table-dark
+- 어두운 줄무늬 테이블 : table-dark와 결합 .table-striped
+- 호버블 다크 테이블 : 테이블 행에 호버효과(회색 배경색)을 추가
+- 테두리가 없는 테이블 : .table-borderless
+</pre>
+
+<table class="table">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-borderd">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-dark table-striped">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-dark table-hover">
+				<thead>
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-borderless table-sm">
+				<thead class="thead-dark">
+					<tr>
+						<th>f</th>
+						<th>f</th>
+						<th>f</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+					<tr>
+						<td>one</td>
+						<td>one</td>
+						<td>one</td>
+					</tr>
+				</tbody>
+			</table>
+
+<h1>반응형 테이블</h1>
+<p>.table-responsive는 필요할 때 테이블에 스크롤 막대를 추가한다.</p>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+	        <tr>
+	          <th>#</th>
+	          <th>Firstname</th>
+	          <th>Lastname</th>
+	          <th>Age</th>
+	          <th>City</th>
+	          <th>Country</th>
+	          <th>Sex</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+	          <th>Example</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+	          <td>1</td>
+	          <td>Anna</td>
+	          <td>Pitt</td>
+	          <td>35</td>
+	          <td>New York</td>
+	          <td>USA</td>
+	          <td>Female</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+	          <td>Yes</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h1>화면 너비에 따라 테이블이 스크롤 막대를 가져와야 하는 시기를 결정할수도 있다</h1>
+<pre>
+- .table-responsive-sm (576px)
+- .table-responsive-md (768px)
+- .table-responsive-lg (992px)
+- .table-responsive-xl (1200px)
+- 사용법은 div에 클래스를 쓰고 테이블을 넣어준다.
+</pre>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

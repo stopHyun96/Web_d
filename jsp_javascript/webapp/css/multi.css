@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f1f1f1;
+}
+
+#regForm {
+	background-color: #ffffff;
+	margin: 100px auto;
+	font-family: Raleway;
+	padding: 40px;
+	width: 70%;
+	min-width: 300px;
+}
+
+h1 {
+	text-align: center;
+}
+
+input {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	font-family: Raleway;
+	border: 1px solid #aaaaaa;
+}
+
+/* 유효성 검사에서 오류가 발생하는 입력상자 표시 */
+input.invalid {
+	background-color: #ffdddd;
+}
+
+/* 기본적으로 모든 단계 숨기기 */
+.tab {
+	display: none;
+}
+
+.right {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	background: #04aa6b;
+	border: none;
+	color: #fff;
+	padding: 10px;
+	font-size: 17px;
+	font-family: Raleway;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: .8;
+}
+
+#prevBtn {
+	background: #bbb;
+}
+
+/* 양식의 단계를 나타내는 원만들기 */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background: #bbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: .5;
+}
+
+.center {
+	text-align: center;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.step.active {
+	opacity: 1;
+}
+/* 완료되고 유효한 단계를 표시 */
+.setp.finish {
+	background-color: #04aa6d;	
+}
+
+/* 자동완성 css */
+.w-300 {
+	width: 300px !important;
+}
+
+.autocomplete {
+	display: inline-flex;
+}
+
+input {
+	border: 1px solid transparent;
+	background-color: #f1f1f1;
+	padding: 10px;
+	font-size: 16px;
+}
+
+input[type=text] {
+	background-color: #fff;
+	max-width: 100%;
+}
+
+input[type=submit] {
+	background: DodgerBlue;
+	color: white;
+	cursor: pointer;
+}
+
+.autocomplete-item {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+	background-color: #e9e9e9;
+}
+
+.autocomplete-actieve {
+	background-color: DodgerBlue !important;
+	color: #fff;
+}

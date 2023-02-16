@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/* Select */
+
+.w-200 {
+	width: 200px;
+}
+
+.custom-select {
+	position: relative;
+	font-family: Arial;
+}
+
+.custom-select select {
+	/* display: none; */
+}
+
+.select-selected {
+	background-color: DodgerBlue;
+}
+
+.select-selected:after {/* 선택요소 내부의 화살표 스타일 지정 */
+	position: absolute;
+	content: "";
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+}
+
+/* 선택상자가 열려 있을 때 화살표는 위쪽을 가리킨다. */
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+}
+
+/* 선택항목을 퐇마하여 항목의 스타일 지정 */
+.select-items div, .select-selected {
+	color: #fff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-color: trnasparent trnasparent rgba(0,0,0,.1) trnasparent;
+	cursor: pointer;
+	user-select: none;
+}
+
+/* 옵션아이템 스타일 */
+.select-items {
+	position: absolute;
+	background: DodgerBlue;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+.select-hide {
+	display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+	background-color: rgba(0,0,0,.1);
+}
+
+/* check */
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: position;
+	font-size: 22px;
+	user-select: none;
+}
+
+.container input { /* 기본값 숨기기 */
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.checkmark { /* create a custom button */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	background: #eee;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* 마우스 오버 시 회색 배경색 추가 */
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+/* 라디오 버튼이 체크되면 파란 배경색 추가 */
+.container input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+/* 표시 만들기 선택하지 않으면 숨겨짐 */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* 선택기 점/원표시 */
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+/* 표시기 스타일 지정 (점/원) */
+.container .checkmark:after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Toggle Switch */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	
+}
+
+/* 기본 숨기기 */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	-webkit-transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background: white;
+	transition: .4s;
+	-webkit-transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-o-transform:translateX(26px);
+	-moz-transform: translateX(26px);
+	transform: translateX(26px);
+	/* cross browsing */
+}
+
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* check checkbox */
+
+.d-none {
+	display: none;
+}
+
+/* 패스워드 체크 */
+input {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+input[type=submit] {
+	background-color: #04aa6d;
+	color: white;
+}
+
+.password-container {
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+
+#message {
+	display: none;
+	background: #f1f1f1;
+	color: #000;
+	position: relative;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+#message p {
+	padding: 10px 35px;
+	font-size: 18px;
+}
+
+.valid {
+	color: green;
+}
+
+.valid:before {
+	position: relative;
+	left: -35px;
+	content: "✔";
+}
+
+.invalid {
+	color: red;
+}
+
+.invalid:before {
+	position: relative;
+	left: -35px;
+	content: "✖";
+}

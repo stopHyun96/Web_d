@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>progress,spinners</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container"><!-- 화면에서 차지하는 전체면적을 얘기합니다 -->
+	<div class="row"><!-- 줄에 개념 -->
+		<div class="col-12">
+			<h1>Progress</h1>
+			<pre>
+			진행률 표시줄 : 사용자에게 프로세스가 얼마나 진행되엇는지 표시할수 있습니다
+			- .progress, progress-bar
+			- 기본size는 16px 정도의 크기를 가지고 있습니다
+			- .progress-bar-striped : 진행률표시줄에 줄무늬를 추가합니다
+			- .progress-bar-animated : 진행률 표시줄에 애니메이션 효과를 주는 클래스를 추가합니다
+			- 여러 진행률 표시줄
+			</pre>
+			<div class="progress">
+				<div class="progress-bar" style="width:70%">70%</div>
+			</div>
+			<div class="progress mt-3">
+				<div class="progress-bar progress-bar-striped" style="width:40%">70%</div>
+			</div>
+			<div class="progress mt-3">
+				<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%">70%</div>
+			</div>
+			<h1>여러진행률 표시줄</h1>
+			<div class="progress">
+				<div class="progress-bar bg-success" style="width:40%">
+				free space
+				</div>
+				<div class="progress-bar bg-warning" style="width:10%">
+				warning
+				</div>
+				<div class="progress-bar bg-danger" style="width:20%">
+				danger
+				</div>
+			</div>
+			<h1>spiner</h1>
+			<pre>
+			- .spinner-border
+			- .spinner-grow : 작아져 있다가 커지는 느낌
+			- sm
+			</pre>
+			<div class="spinner-border"></div>
+			<div class="spinner-grow spinner-grow-sm"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>Tool tip</title>
+</head>
+<body>
+<div class="container"> <!-- 화면에서 차지하는 전체 면적을 얘기한다. -->
+	<div class="row"> <!-- 줄의 개념 -->
+		<div class="col-12">
+		<h1>Tool tip : 짧은 메세지 상자</h1>
+		<p>click했을 때 대화형 상자가 팝업되는 형태</p>
+		<p>data-placement="right, top, bottom, left"</p>
+		<a href="#" data-toggle="tooltip" data-placement="right" title="타이틀 영역에 쓰면 된다.">Hover over me</a>
+		<script>
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+		</script>
+		
+		<h1>타이틀과 데이터콘텐츠를 가지는 popover</h1>
+		<a href="#" data-toggle="popover" title="popover header" data-content="some content ..." data-placement="bottom" data-trigger="focus">Toggle popover</a>
+		<script>
+		$(function() {
+			$('[data-toggle="popover"]').popover();
+		});
+		</script>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>flex</title>
+</head>
+<body>
+<div class="container"> <!-- 화면에서 차지하는 전체 면적을 얘기한다. -->
+	<div class="row"> <!-- 줄의 개념 -->
+		<div class="col-12">
+			<h1>flex</h1>
+<pre>
+- 부트스트랩3와 부트스트랩4의 차이점은 레이아웃을 flex로 처리한다.
+- flex는 100%블록 선언되고
+- d-inline-flex는 블록형태가 아닌 모아지는 느낌의 처리가 된다.
+</pre>
+
+<div class="d-flex p-3 bg-secondary text-white">
+<div class="p-2 bg-info">flex item 1</div>
+<div class="p-2 bg-warning">flex item 2</div>
+<div class="p-2 bg-primary">flex item 3</div>
+</div>
+
+<h1>inline flex</h1>
+<div class="d-inline-flex p-3 bg-secondary text-white">
+<div class="p-2 bg-info">flex item 1</div>
+<div class="p-2 bg-warning">flex item 2</div>
+<div class="p-2 bg-primary">flex item 3</div>
+</div>
+
+<h1>.flex-row : 항목을 가로로(나란히) 표시하는데 사용</h1>
+<h1>.flex-row-reverse : 항목을 가로로 오른쪽 역순으로 정렬</h1>
+<div class="d-flex flex-row-reverse p-3 bg-secondary text-white">
+<div class="p-2 bg-info">flex item 1</div>
+<div class="p-2 bg-warning">flex item 2</div>
+<div class="p-2 bg-primary">flex item 3</div>
+</div>
+
+<h1>세로방향 .flex-column(수직) .flex-column-reverse(수직반전)</h1>
+<div class="d-flex flex-column-reverse p-3 bg-secondary text-white">
+<div class="p-2 bg-info">flex item 1</div>
+<div class="p-2 bg-warning">flex item 2</div>
+<div class="p-2 bg-primary">flex item 3</div>
+</div>
+
+<h1>justify</h1>
+<pre>
+1)justify-contetn-start : 왼쪽
+2)justify-contetn-end : 오른쪽
+2)justify-contetn-center : 가운데
+2)justify-contetn-between : 왼쪽과 오른쪽 여백이 없는 왼쪽 오른쪽 수평정렬
+2)justify-contetn-around : 왼쪽과 오른쪽 여백이 있는 왼쪽 오른쪽 수평정렬
+</pre>
+
+<h1>equal widths : 플렉스 박스 안 차일드 엘리먼트의 가로폭을 똑같이 설정</h1>
+<div class="d-flex">
+<div class="p-2 bg-info flex-fill">flex item 1</div>
+<div class="p-2 bg-warning flex-fill">flex item 2</div>
+<div class="p-2 bg-primary flex-fill">flex item 3</div>
+</div>
+
+<h1>성장 : flex-grow-1 (나머지 공간 차지)</h1>
+<div class="d-flex">
+<div class="p-2 bg-info">flex item 1</div>
+<div class="p-2 bg-warning">flex item 2</div>
+<div class="p-2 bg-primary flex-grow-1">flex item 3</div>
+</div>
+
+<h1>수축 : flex-shrink-1</h1>
+<div class="d-flex">
+<div class="p-2 bg-info w-25">flex item 1</div>
+<div class="p-2 bg-warning w-50">flex item 2</div>
+<div class="p-2 bg-primary flex-shrink-1">flex item 3</div>
+</div>
+
+<h1>order : 순서를 표기</h1>
+<div class="d-flex">
+<div class="p-2 bg-info w-25 order-3">flex item 1</div>
+<div class="p-2 bg-warning w-50 order-2">flex item 2</div>
+<div class="p-2 bg-primary flex-shrink-1 order-1">flex item 3</div>
+</div>
+
+<h1>포장하다 : wrap flex-nowrap(기본값) .flex-wrap(감쌈), .flex-wrap-reverse</h1>
+<div class="d-flex flex-wrap bg-secondary">
+<div class="p-2 border">Flex item 01</div>
+<div class="p-2 border">Flex item 02</div>
+<div class="p-2 border">Flex item 03</div>
+<div class="p-2 border">Flex item 04</div>
+<div class="p-2 border">Flex item 05</div>
+<div class="p-2 border">Flex item 06</div>
+<div class="p-2 border">Flex item 07</div>
+<div class="p-2 border">Flex item 08</div>
+<div class="p-2 border">Flex item 09</div>
+<div class="p-2 border">Flex item 10</div>
+<div class="p-2 border">Flex item 11</div>
+<div class="p-2 border">Flex item 12</div>
+<div class="p-2 border">Flex item 13</div>
+<div class="p-2 border">Flex item 14</div>
+<div class="p-2 border">Flex item 15</div>
+<div class="p-2 border">Flex item 16</div>
+<div class="p-2 border">Flex item 17</div>
+<div class="p-2 border">Flex item 18</div>
+<div class="p-2 border">Flex item 19</div>
+<div class="p-2 border">Flex item 20</div>
+<div class="p-2 border">Flex item 21</div>
+<div class="p-2 border">Flex item 22</div>
+<div class="p-2 border">Flex item 23</div>
+<div class="p-2 border">Flex item 24</div>
+<div class="p-2 border">Flex item 25</div>
+<div class="p-2 border">Flex item 26</div>
+<div class="p-2 border">Flex item 27</div>
+<div class="p-2 border">Flex item 28</div>
+<div class="p-2 border">Flex item 29</div>
+<div class="p-2 border">Flex item 30</div>
+</div>
+
+<h1>수직 컨텐츠 정렬 동일한 방법(align-items-start)</h1>
+<pre>
+align-content-start : top
+align-content-end : bottom
+align-content-center : middle
+align-content-between : middle 여백 있게 수직정렬
+align-content-around : top middle bottom 여백 있게 수직정렬
+align-content-stretch : 상위 요소의 높이만큼 꽉 차게 늘어남(여백 x)
+</pre>
+
+<h1>자기정렬 : 스스로 따로 움직이는</h1>
+<div class="d-flex bg-light" style="height: 150px">
+<div class="p-2 border">Flex item 1</div>
+<div class="p-2 border align-self-start">Flex item 2</div>
+<div class="p-2 border">Flex item 3</div>
+</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>

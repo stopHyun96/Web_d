@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.h-300{
+height:300px;
+}
+ul.nav-pills{
+top:20px;
+position:fixed;
+}
+div.col-8 div{
+height:500px;
+}
+.w-15{
+width:150px; height:150px;
+}
+.w-55{
+width:55px; height:55px;
+}
+.w-45{
+width:45px; height:45px;
+}
